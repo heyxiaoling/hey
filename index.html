@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <!-- ie9+ rendering support for latest standards -->
+  <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>hey commonjs</title>
+
+  <!-- third-party stylesheets -->
+
+  <!-- our stylesheets -->
+  <link rel="stylesheet" href="css/common.css" type="text/css"/>
+
+  <!-- third-party javascript -->
+  <script src="js/jq/jquery-1.9.1.js"></script>
+  <script src="js/hey.js" ></script>
+  <script src="js/hey.util.js" ></script>
+  <script src="js/hey.model.js"></script>
+  <script src="js/hey.hash.js"></script>
+  <script src="js/hey.page.js"></script>
+  <script src="js/hey.ele.js"></script>
+  <script>
+    $(function () { hey.initModule(); });
+  </script>
+
+</head>
+<body>
+<div id="header"></div>
+<div class="page" id="index" data-hash="index" data-movestyle="left">111111111111</div>
+<div class="page" id="login" data-hash="login" data-movestyle="left">
+
+</div>
+<div class="page" id="detail" data-hash="detail" data-movestyle="left">333333333</div>
+<div id="footer">
+  <ul>
+    <li class="active"><a href="javascript:;" data-hash="index" >index</a></li>
+    <li><a href="javascript:;" data-hash="login" >login</a></li>
+    <li><a href="javascript:;" data-hash="detail" >detail</a></li>
+  </ul>
+</div>
+</body>
+</html>
