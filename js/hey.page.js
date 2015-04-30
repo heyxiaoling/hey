@@ -1,23 +1,25 @@
 /*所有页面打开，隐藏，打开方式，隐藏方式*/
 hey.page = (function () {
-  var initModule,page_index,page_login,page_detail,oHash=["index"],num=0;
-  var ww=$(window).width(),wh=$(window).height();
+  var initModule,page_index,page_login,page_detail;
+
+  /*index page*/
   page_index = {
-    pageIn: function(obj){
+    pageIn: function(obj,mw){
+      var ww=$(window).width(),wh=$(window).height();
       $('.page').css({'z-index':10});      
-      if(obj.attr('data-movestyle')=="left"){
+      if(mw=="left"){
         obj.css({"left":ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','right');
+          hey._hash.movestyle["index"]["moves"]="right";
         });
       }else{
         obj.css({"left":-ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','left');
+          hey._hash.movestyle["index"]["moves"]="left";
         });
       }
     },
@@ -25,6 +27,8 @@ hey.page = (function () {
 
     }
   };
+
+  /*login page*/
   page_login = {
     pageCreate: function(obj){
       var main_html=String()
@@ -37,44 +41,47 @@ hey.page = (function () {
         +'</div>';
       obj.html(main_html);
     },
-    pageIn: function(obj){
+    pageIn: function(obj,mw){
+      var ww=$(window).width(),wh=$(window).height();
       $('.page').css({'z-index':10});
-      if(obj.attr('data-movestyle')=="left"){
+      if(mw=="left"){
         obj.css({"left":ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','right');
-        });
-      }else if(obj.attr('data-movestyle')=="right"){
-        obj.css({"left":-ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','left');
-        });
-      }
-    },
-    pageOut:function(){
-
-    }
-  }; 
-  page_detail = {
-    pageIn: function(obj){
-      $('.page').css({'z-index':10});
-      if(obj.attr('data-movestyle')=="left"){
-        obj.css({"left":ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','right');
+          hey._hash.movestyle["login"]["moves"]="right";
         });
       }else{
         obj.css({"left":-ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          $(this).attr('data-movestyle','left');
+          hey._hash.movestyle["login"]["moves"]="left";
+        });
+      }
+    },
+    pageOut:function(){
+
+    }
+  };
+  /*detail page*/ 
+  page_detail = {
+    pageIn: function(obj,mw){
+      var ww=$(window).width(),wh=$(window).height();
+      $('.page').css({'z-index':10});
+      if(mw=="left"){
+        obj.css({"left":ww,"z-index":99,"display":'block'});
+        obj.animate({left:0},200,function(){
+          $('.page').css({'z-index':10,'display':'none'});
+          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
+          hey._hash.movestyle["detail"]["moves"]="right";
+        });
+      }else{
+        obj.css({"left":-ww,"z-index":99,"display":'block'});
+        obj.animate({left:0},200,function(){
+          $('.page').css({'z-index':10,'display':'none'});
+          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
+          hey._hash.movestyle["detail"]["moves"]="left";
         });
       }
     },
@@ -83,7 +90,7 @@ hey.page = (function () {
     }
   };
 
-  initModule = function ( $obj ) {
+  initModule = function (){
     
   };
   return { 
