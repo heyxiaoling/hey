@@ -4,6 +4,18 @@ hey.page = (function () {
 
   /*index page*/
   page_index = {
+    pageCreate: function(obj){
+      var main_html=String()
+        + '<ul class="tab_li">'
+          +'<li class="active">1</li>'
+          +'<li>2</li>'
+          +'<li>3</li>'
+        +'</ul>'
+        +'<div class="tab_content" style="display:block;">111</div>'
+        +'<div class="tab_content">222</div>'
+        +'<div class="tab_content">333</div>';
+      obj.html(main_html);
+    },
     pageIn: function(obj,mw){
       var ww=$(window).width(),wh=$(window).height();
       $('.page').css({'z-index':10});      
@@ -12,14 +24,12 @@ hey.page = (function () {
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["index"]["moves"]="right";
         });
       }else{
         obj.css({"left":-ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["index"]["moves"]="left";
         });
       }
     },
@@ -49,14 +59,12 @@ hey.page = (function () {
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["login"]["moves"]="right";
         });
       }else{
         obj.css({"left":-ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["login"]["moves"]="left";
         });
       }
     },
@@ -74,14 +82,12 @@ hey.page = (function () {
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["detail"]["moves"]="right";
         });
       }else{
         obj.css({"left":-ww,"z-index":99,"display":'block'});
         obj.animate({left:0},200,function(){
           $('.page').css({'z-index':10,'display':'none'});
           $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-          hey._hash.movestyle["detail"]["moves"]="left";
         });
       }
     },

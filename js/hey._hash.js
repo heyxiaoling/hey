@@ -1,73 +1,119 @@
 /*所有页面打开，隐藏，打开方式，隐藏方式，页面生成*/
 hey._hash = (function () {
-  var initModule,hashChange,
-  configMap = {//所有静态配置放在这里
-    _hash : [" "],
-    num : 0,
-  },
-  movestyle={
-    "index":{"moves":"left","click":false,"gohead":false,"goback":false},
-    "login":{"moves":"left","click":false,"gohead":false,"goback":false},
-    "detail":{"moves":"left","click":false,"gohead":false,"goback":false},
-  },
-  hashchangeway=true,//true表示浏览器前进后退
-  movefn;
-  hashChange = function(){
+  var 
+    configMap = {//所有静态配置放在这里
+      anchor_schema_map : {
+        page  : { index : true, detail : true,login: true }
+      }
+    },
+    stateMap  = {
+      $container  : null,
+      anchor_map  : {},
+      what_page     : 'index'
+    },
+    initModule,onHashchange,copyAnchorMap,changeAnchorPart;
+
+
+  copyAnchorMap = function () {
+    return $.extend( true, {}, stateMap.anchor_map );
+  };
+  changeAnchorPart = function ( arg_map ) {
+    var
+      anchor_map_revise = copyAnchorMap(),
+      bool_return       = true,
+      key_name, key_name_dep;
+
+    KEYVAL:
+    for ( key_name in arg_map ) {
+      if ( arg_map.hasOwnProperty( key_name ) ) {
+
+        if ( key_name.indexOf( '_' ) === 0 ) { continue KEYVAL; }
+
+        anchor_map_revise[key_name] = arg_map[key_name];
+
+        key_name_dep = '_' + key_name;
+        if ( arg_map[key_name_dep] ) {
+          anchor_map_revise[key_name_dep] = arg_map[key_name_dep];
+        }
+        else {
+          delete anchor_map_revise[key_name_dep];
+          delete anchor_map_revise['_s' + key_name_dep];
+        }
+      }
+    }
+    try {
+      $.uriAnchor.setAnchor( anchor_map_revise );
+    }catch ( error ) {
+      $.uriAnchor.setAnchor( stateMap.anchor_map,null,true );
+      bool_return = false;
+    }
+
+    return bool_return;
+  };
+
+  onHashchange = function(){
+
+    console.log(stateMap.anchor_map);
+    var
+      anchor_map_previous = copyAnchorMap(),
+      anchor_map_proposed,
+      _s_page_previous, _s_page_proposed,
+      s_page_proposed;
+
+    try { 
+      anchor_map_proposed = $.uriAnchor.makeAnchorMap(); 
+    }catch ( error ) {
+      $.uriAnchor.setAnchor( anchor_map_previous, null, true );
+      return false;
+    }
+    stateMap.anchor_map = anchor_map_proposed;
+    _s_page_previous = anchor_map_previous._s_page;
+    _s_page_proposed = anchor_map_proposed._s_page;
+    console.log(_s_page_proposed+":"+_s_page_previous);
+    if(_s_page_proposed||_s_page_proposed!==_s_page_previous){
+      s_page_proposed = anchor_map_proposed.page?anchor_map_proposed.page:stateMap.what_page;
+      switch ( s_page_proposed ) {
+          case 'index' :
+            console.log('index');
+            hey.page.page_index.pageIn($('#index'),'left');
+          break;
+          case 'login':
+            console.log('login');
+            hey.page.page_login.pageIn($('#login'),'left');
+          break;
+          case 'detail' :
+            console.log('detail');
+            hey.page.page_detail.pageIn($('#detail'),'left');
+          break;
+          default :
+            delete anchor_map_proposed.page;
+            $.uriAnchor.setAnchor( anchor_map_proposed, null, true );
+        }
+        return false; 
+      }
+    }
+    
+
+  initModule = function( $obj ){
     var oA=$("a[data-hash]");
     var _hash;
     for(var i=0;i<oA.length;i++){
       oA.eq(i).on('click',function(){
         _hash=this.dataset.hash;
-        if(window.location.hash==_hash){
-          return false;
-        }else{
-          configMap._hash.push(_hash);
-          configMap.num++;
-          hashchangeway=false;
-          movestyle[_hash]['moves']=$(this).attr('data-movestyle')||"left";
-          window.location.hash = configMap._hash[configMap.num];
-        }
-      })
-    }
-    window.onhashchange = function(){
-      console.log(history);
-      var _hash=window.location.hash.substr(1);
-      if(!hashchangeway){//点击或者其实形式hash变化
-        switch(_hash){
-          case "index":
-            hey.page.page_index.pageIn($("#index"),movestyle.index.moves);
-            hashchangeway=true;
-            break;
-          case "login":
-            hey.page.page_login.pageIn($("#login"),movestyle.login.moves);
-            hashchangeway=true;
-            break;
-          case "detail":
-            hey.page.page_detail.pageIn($("#detail"),movestyle.detail.moves);
-            hashchangeway=true;
-            break;
-          default :
-            return false;
-            break;
-        }
-      }else{//浏览器前进后退hash变化
-        alert(configMap._hash[configMap.num-1]);
-        if(_hash==configMap._hash[configMap.num-1]){
-          alert(3333);
-        }
-        
-      }
-    };
-  };
-  movefn = function(){
+        changeAnchorPart({
+          page : _hash 
+        });
+      });
+    } 
 
-  };
-  initModule = function ( $obj ) {
-    hashChange();
+    $.uriAnchor.configModule({
+      schema_map : configMap.anchor_schema_map
+    }); 
+    $(window).bind( 'hashchange', onHashchange ).trigger( 'hashchange' );
+    
   };
   return { 
-    initModule : initModule,
-    movestyle : movestyle
+    initModule : initModule
    };
 }());
 

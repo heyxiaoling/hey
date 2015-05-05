@@ -4,14 +4,27 @@
 */
 hey.util = (function(){
 	
-  var initModule;
-    
+  var initModule,index_tab;
+  index_tab = function($ele){
+  	var _li=$ele.find('.tab_li li');
+  	var _wap=$ele.find('.tab_content');
+  	_li.on('click',function(){
+  		var _index=$(this).index();
+  		_li.removeClass('active');
+  		_li.eq(_index).addClass('active');
+    	_wap.css({'display':'none'});
+    	_wap.eq(_index).css({'display':'block'});
+    });
+  };  
   
 
-  initModule = function () {
-    
+  initModule = function ($ele) {
+   
   };
-  return { initModule : initModule };
+  return { 
+		initModule : initModule,
+		index_tab :index_tab 
+	};
 
 }())
 

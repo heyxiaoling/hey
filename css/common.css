@@ -51,10 +51,11 @@ textarea {resize:none;}
 #footer ul li.active{background:#152d41;}
 #footer ul li.active  a{ color:#fff;}
 
-
-
-
-
+.tab_li{}
+.tab_li li{cursor:pointer;float:left; width:40px; height:30px; line-height:30px; color:#ccc; text-align:center; background:#fff; margin:10px; border-radius:4px; -webkit-border-daius:4px;}
+.tab_content{display:none;clear:both;background:#fff; height:140px; background:#fff; color:#000; border:1px solid #ccc;}
+.tab_li li:hover{background:#ccc; color:#fff;}
+.tab_li li.active{background:#ccc; color:#fff;}
 
 
 

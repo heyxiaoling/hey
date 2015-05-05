@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset=UTF-8>
+	<title>见缝插针(jq版)</title>
+	<style>
+#tar{width:200px;height:200px;background:#999; font-size: 40px; color: #fff;margin-left:43%; margin-top:10%;border-radius: 100px;position: relative;}
+.init-arrow1{-webkit-transform:rotate(0deg); transform:rotate(0deg);}
+.init-arrow2{-webkit-transform:rotate(90deg); transform:rotate(90deg);}
+.init-arrow3{-webkit-transform:rotate(180deg); transform:rotate(180deg);}
+.init-arrow4{-webkit-transform:rotate(270deg); transform:rotate(270deg);}
+.arrow{position: absolute; top:50%; left:50% ;width:200px; height: 1px; border-bottom:1px solid red;-webkit-transform-origin:0% 50%;transform-origin:0% 50%; text-align:right;}
+.arrow:after{content:"";width: 40px; height: 40px; background:red; position: absolute; top:-20px;right: 0; border-radius: 40px;}
+.btn-box{ text-align: center;}
+#score{ text-align: center; font-size: 28px; color: red; margin-top: 140px;}
+#btn{width: 120px; height: 60px; font-size: 20px;}
+</style>
+</head>
+<body>
+	<div style="text-align:center;">
+		<h1>见缝插针（jq版）</h1>
+		<h5>规则:点击"射击"按钮，把箭射在圆盘空隙处。</h5>
+		<h5>
+			<a href="http://denghao.me" target="_blank">邓浩</a>
+			2015.4.30
+		</h5>
+	</div>
+	<div id="tar">
+		<div class="arrow init-arrow1"></div>
+		<div class="arrow init-arrow2"></div>
+		<div class="arrow init-arrow3"></div>
+		<div class="arrow init-arrow4"></div>
+	</div>
+	<div id="score">0</div>
+	<div class="btn-box">
+		<input id="btn" type="button" value="射击"></div>
+	<div id="t1"></div>
+
+	<script src="http://denghao.me/js/jquery.min.js"></script>
+	<script>
+$(function() {
+	var tar = $("#tar"), //目标
+		btn = $("#btn"), //发射按钮
+		arrowIndex = 1, //针的索引值
+		rotateNum = 0, //初始度数
+		arrPos = [0, 90, -90, -180, -270], //初始化不能触碰区域
+		safeDistance = 13, //安全距离
+		score = 0; //初始分数
+	setInterval(rotate,10);
+	function rotate() {
+		tar.css("-webkit-transform", "rotate(" + rotateNum + "deg)");
+		tar.css("transform", "rotate(" + rotateNum + "deg)");
+		if (rotateNum >= 360) {
+			rotateNum = 0
+		} else {
+			rotateNum++;
+		}
+	};
+	btn.click(function() {
+			shootArrow(arrowIndex);
+			arrowIndex++;
+		});
+
+	function shootArrow(i) {
+		var arrowDiv = "<div class='arrow' id='arrow" + i + "'></div>";
+		var newPos=-1*(rotateNum-90);
+		tar.append(arrowDiv);
+		$("#arrow" + i).css('-webkit-transform',"rotate("+newPos+"deg)");
+		$("#arrow" + i).css('transform',"rotate("+newPos+"deg)");
+		arrPos.push(newPos);
+		var arrFilter = $.grep(arrPos, function(n, i) {
+			return (Math.abs(n-newPos) <safeDistance);
+		});
+		if (arrFilter.length >= 2) {
+			alert("失败！你共获得"+score+"分");
+			window.location.reload();
+		}else{
+			score++;
+			$("#score").html(score);
+		};
+	};
+});
+</script>
+</body>
+</html>
