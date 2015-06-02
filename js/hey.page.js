@@ -16,22 +16,9 @@ hey.page = (function () {
         +'<div class="tab_content">333</div>';
       obj.html(main_html);
     },
-    pageIn: function(obj,mw){
-      var ww=$(window).width(),wh=$(window).height();
+    pageIn: function(obj){
       $('.page').css({'z-index':10});      
-      if(mw=="left"){
-        obj.css({"left":ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }else{
-        obj.css({"left":-ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }
+      obj.css({"z-index":99,"display":'block'});
     },
     pageOut:function(){
 
@@ -51,22 +38,9 @@ hey.page = (function () {
         +'</div>';
       obj.html(main_html);
     },
-    pageIn: function(obj,mw){
-      var ww=$(window).width(),wh=$(window).height();
-      $('.page').css({'z-index':10});
-      if(mw=="left"){
-        obj.css({"left":ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }else{
-        obj.css({"left":-ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }
+    pageIn: function(obj){
+      $('.page').css({'z-index':10});      
+      obj.css({"z-index":99,"display":'block'});
     },
     pageOut:function(){
 
@@ -74,22 +48,9 @@ hey.page = (function () {
   };
   /*detail page*/ 
   page_detail = {
-    pageIn: function(obj,mw){
-      var ww=$(window).width(),wh=$(window).height();
-      $('.page').css({'z-index':10});
-      if(mw=="left"){
-        obj.css({"left":ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }else{
-        obj.css({"left":-ww,"z-index":99,"display":'block'});
-        obj.animate({left:0},200,function(){
-          $('.page').css({'z-index':10,'display':'none'});
-          $('div[data-hash='+obj.attr('id')+']').css({'display':'block'});
-        });
-      }
+    pageIn: function(obj){
+      $('.page').css({'z-index':10});      
+      obj.css({"z-index":99,"display":'block'});
     },
     pageOut:function(){
 

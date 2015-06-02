@@ -1,0 +1,88 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>复制页面内容到粘贴板，支持IE、Chrome、火狐等多种浏览器-柯乐义</title>
+	<style type="text/css">
+body { font-family:arial,sans-serif; font-size:9pt; }
+
+.my_clip_button { width:150px; text-align:center; border:1px solid black; background-color:#ccc; margin:10px; padding:10px; cursor:default; font-size:9pt; }
+.my_clip_button.hover { background-color:#eee; }
+.my_clip_button.active { background-color:#aaa; }
+</style>
+	<script type="text/javascript" src="http://keleyi.com/keleyi/phtml/liulanqi/index/KeleyiClipboard.js"></script>
+	<script type="text/javascript">
+var clip = null;
+
+function $(id) { return document.getElementById(id); }
+
+function init() {
+clip = new ZeroClipboard.Client();
+clip.setHandCursor(true);
+
+clip.addEventListener('load', function (client) {
+debugstr("准备就绪");
+});
+
+clip.addEventListener('mouseOver', function (client) {
+// update the text on mouse over
+clip.setText($('fe_text').value);
+});
+
+clip.addEventListener('complete', function (client, text) {
+debugstr("已经把这些文本复制到粘贴板： " + text);
+});
+
+clip.glue('d_clip_button', 'd_clip_container');
+}
+
+function debugstr(msg) {
+var p = document.createElement('p');
+p.innerHTML = msg;
+$('d_debug').appendChild(p);
+}
+</script>
+</head>
+<body onLoad="init()">
+	<h1>复制页面内容到粘贴板</h1>
+	<p>
+		<script>document.write("您的浏览器是: " + navigator.userAgent);</script>
+	</p>
+	<table width="100%">
+		<tr>
+			<td width="50%" valign="top">
+				<!-- Upload Form -->
+				<table>
+					<tr>
+						<td align="right"> <b>文本:</b>
+						</td>
+						<td align="left">
+							<textarea id="fe_text" cols=50 rows=5 onChange="clip.setText(this.value)">
+								柯乐义文本复制，点击下面的按钮，将会把这里的文本复制到粘贴板。http://keleyi.com 还可以改变这里的文本试试。
+							</textarea>
+						</td>
+					</tr>
+				</table>
+				<br/>
+				<div id="d_clip_container" style="position:relative">
+					<div id="d_clip_button" class="my_clip_button"> <b>复制到粘贴板</b>
+					</div>
+				</div>
+			</td>
+			<td width="50%" valign="top">
+				<!-- Debug Console -->
+				<div id="d_debug" style="border:1px solid #aaa; padding: 10px; font-size:9pt;">
+					<h3>状态和已经复制的内容:</h3>
+				</div>
+			</td>
+		</tr>
+	</table>
+
+	<br/>
+	<br/>
+	在这里粘贴，看看是不是已经复制了上面内容
+	<br/>
+	<textarea id="testarea" cols=50 rows=10></textarea>
+	<br/>
+	<input type=button value="清空" onClick="$('testarea').value = '';"/>
+</body>
+</html>

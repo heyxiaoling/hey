@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<!-- ie9+ rendering support for latest standards -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>hey commonjs</title>
+<style type="text/css">
+html, body { height: 100%; overflow: hidden;}
+body {
+  background-color: #222;
+  background-image: radial-gradient(  circle,rgba(0,0,0,0) 25%,rgba(0,0,0,1) 87.5%),
+                    linear-gradient(  to top,
+    
+                                      rgba(0,0,0,0) 0.2em,
+                                      rgba(0,0,0,0.25) 1em,
+                                      white 1em,
+                                      white 2em,
+                                      rgba(0,0,0,0.25) 2em,
+                                      rgba(64,64,64,1) 2.2em),
+                    linear-gradient(  to bottom,
+                                      
+                                      rgba(0,0,0,0) 0.2em,
+                                      rgba(0,0,0,0.25) 1em,
+                                      white 1em,
+                                      white 2em,
+                                      rgba(0,0,0,0.25) 2em,
+                                      rgba(64,64,64,1) 2.2em),
+                    linear-gradient(  transparent,
+                                      rgba(255,255,255,0.125) 45%,
+                                      rgba(255,255,255,0.125) 55%,
+                                      transparent),
+                    linear-gradient(  45deg,
+                                      rgba(255,255,255,0.125) 0%,
+                                      rgba(255,255,255,0.125) 25%,
+                                      transparent 25%,
+                                      transparent 50%,
+                                      rgba(255,255,255,0.125) 50%,
+                                      rgba(255,255,255,0.125) 75%,
+                                      transparent 75%);
+  background-repeat: no-repeat, repeat-x, repeat-x, repeat-x, repeat;
+  background-position: 50% 50%, center top, center bottom, 50% 50%, 50% 50%;
+  background-size: 100% 100%, 100% 50%,  100% 50%, 100% 12em, 5em 5em;
+  padding: 0;  
+  transition-property: background-color, background-position;
+  transition-duration: 250ms;
+  animation: 5s moveBG linear infinite;
+  animation-direction: normal;
+  text-align: center;
+}
+
+body:hover {
+  background-size: cover,  100% calc( 50% - 2em ),  100% calc( 50% - 2em ), 15%, 5em 5em;
+}
+
+@keyFrames moveBG {
+  from {
+    background-position: 50% 50%, center top, center bottom, 50% 50%, 0 50%;
+  }
+  to {
+    background-position: 50% 50%, center top, center bottom, 50% 50%, 5em 50%;
+  }
+}
+body:hover {
+    background-color: #000;
+}
+
+.colorWheel {
+  display: inline-block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  margin: -7.5em;
+  border: solid 0.5em white;
+  box-shadow: 0 0 1em rgba(0,0,0,1),
+        inset 0 0 1em rgba(0,0,0,1);
+  text-align: center;
+  line-height: 1em;
+  white-space: nowrap;
+  color: transparent;
+  cursor: pointer;
+  
+  width: 15em; height: 15em;
+  border-radius: 50%;
+  background: radial-gradient( #777 , transparent 90%) 100% 100%,
+    linear-gradient(36deg, #272b66 42.34%, transparent 42.34%),
+    linear-gradient(72deg, #2d559f 75.48%, transparent 75.48%),
+    linear-gradient(-36deg, #9ac147 42.34%, transparent 42.34%) 100% 0,
+    linear-gradient(-72deg, #639b47 75.48%, transparent 75.48%) 100% 0, 
+    linear-gradient(36deg, transparent 57.66%, #e1e23b 57.66%) 100% 100%,
+    linear-gradient(72deg, transparent 24.52%, #f7941e 24.52%) 100% 100%,
+    linear-gradient(-36deg, transparent 57.66%, #662a6c 57.66%) 0 100%,
+    linear-gradient(-72deg, transparent 24.52%, #9a1d34 24.52% ) 0 100%, 
+    #43a1cd linear-gradient(#ba3e2e, #ba3e2e) 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%,
+    
+                    50%  50%,
+                    50%  50%,
+                    50%  50%,
+    
+                    50%  50%,
+                    50%  50%,
+                    50%  50%,
+    
+                    50%  50%,
+                    50%  50%,
+                    50%  50%;
+  transition-property: border-width, transform, text-shadow;
+  transition-duration: 1s;
+  outline: 0;
+}
+.colorWheel:before,
+.colorWheel:after {
+  outline: 0;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%; left: 50%;
+  border-radius: 50%;
+  /* add slash at end of line to see central part *
+  opacity: .15;
+  /**/
+  background: inherit;
+  content: '';
+  transition: 3s;  
+}
+.colorWheel:focus:before,
+.colorWheel:hover:before {
+  border-width: 0;
+  box-shadow: 0 0 1em rgba(0,0,0,1),
+              inset  .1em  .1em  .2em  rgba(255,255,255,0.25),
+              inset  -1em  -1em   3em  rgba(255,255,255,0.05);
+  transform: rotate(-362deg);
+}
+.colorWheel:focus:after,
+.colorWheel:hover:after {
+  transform: rotate(359deg);
+  border-width: 0;
+  padding: 0.05em;
+}
+.colorWheel:focus,
+.colorWheel:hover {
+  box-shadow:         1em   1em   3em  rgba(0,0,0,0.1),
+                    -.1em -.1em  .2em  rgba(0,0,0,0.25),
+              inset  .1em  .1em  .2em  rgba(255,255,255,0.25),
+              inset  -1em  -1em   3em  rgba(255,255,255,0.05);
+  border-width: 0;
+}
+
+
+.colorWheel:active:before,
+.colorWheel:active:after {
+  transition: 250ms;
+}
+.colorWheel:active:before {
+  transform: rotate(-360deg);
+}
+.colorWheel:focus:before {
+  box-shadow: 0 0 1em rgba(255,255,255,1),
+              inset  .1em  .1em  .2em  rgba(255,255,255,0.25),
+              inset  -1em  -1em   3em  rgba(255,255,255,0.05);
+}
+.colorWheel:active:after {
+  transform: rotate(360deg);
+}
+
+
+.colorWheel:before {
+  box-shadow: 0 0 1em #000,
+        inset 0 0 1em #000;
+  margin: -10em;
+  width: 20em; height: 20em;
+  border: solid 0.5em white;
+  z-index: -1;
+  transform: rotate( 600deg);
+
+}
+.colorWheel:after {
+  box-shadow: inherit;
+  margin: -.5em;
+  width: 1em; height: 1em;
+  border: solid 0.05em white;
+  text-align: center;
+  line-height: 0.975em;
+  padding: 0;
+  content: "✿";
+  font-size: 10em;
+  text-indent: -0.05em;
+  color: #FFF;
+  text-shadow: 0 0 .075em #000;
+  transform: rotate( 120deg);
+}
+.colorWheel:focus:after,
+.colorWheel:hover:after {
+    text-shadow: 0 0 .05em rgba(0,0,0,0.25);
+
+}	
+</style>
+</head>
+<body>
+<div class='colorWheel' contenteditable="true"></div>
+</body>
+</html>

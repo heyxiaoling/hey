@@ -4,7 +4,7 @@
   <!-- ie9+ rendering support for latest standards -->
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>hey commonjs</title>
+  <title>hey uri</title>
 
   <!-- third-party stylesheets -->
 
@@ -14,29 +14,20 @@
   <!-- third-party javascript -->
   <script src="js/jq/jquery-1.9.1.js"></script>
   <script src="js/jq/jquery.uriAnchor-1.1.3.js"></script>
-  <script src="js/hey.js" ></script>
-  <script src="js/hey.util.js" ></script>
-  <script src="js/hey.model.js"></script>
-  <script src="js/hey._hash.js"></script>
-  <script src="js/hey.ele.js"></script>
-  <script src="js/hey.page.js"></script>
   <script>
-    $(function () { hey.initModule(); });
+   
   </script>
 
 </head>
 <body>
 <div id="header"></div>
-<div class="page" id="index" data-hash="index" data-movestyle="left">
+<div class="page" id="index" data-hash="index" data-movestyle="left" style="display:block">
 
 </div>
 <div class="page" id="login" data-hash="login" data-movestyle="left">
 
 </div>
-<div class="page" id="detail" data-hash="detail" data-movestyle="left">
-  
-  <a href="javascript:;" data-hash="list" style="color:#fff;">4444444444</a>
-</div>
+<div class="page" id="detail" data-hash="detail" data-movestyle="left">333333333</div>
 <div id="footer">
   <ul>
     <li class="active"><a href="javascript:;" data-hash="index" >index</a></li>
@@ -44,5 +35,29 @@
     <li><a href="javascript:;" data-hash="detail" >detail</a></li>
   </ul>
 </div>
+<script type="text/javascript">
+
+  // $("#footer a").on('click',function(){
+  //   var _index=$(this).index();
+  //   var _hash=$(this).attr('data-hash');
+  //   window.location.hash = _hash;
+  //   $('.page').hide();
+  //   $("#"+_hash+"").show();
+  // });
+
+  // window.addEventListener('hashchange',function(event){
+  //   alert("oldurl"+event.oldURL+"newurl"+event.newURL);
+
+  // },false);
+
+  $.uriAnchor.setAnchor({
+    page : 'index',
+    _page : {
+      moveway: 'left'
+    }
+  });
+  var arr1=window.location.hash.split("|")
+  alert(arr1[2].substring(8));
+</script>
 </body>
 </html>

@@ -2,21 +2,22 @@
 hey._hash = (function () {
   var 
     configMap = {//所有静态配置放在这里
-      anchor_schema_map : {
-        page  : { index : true, detail : true,login: true }
-      }
+
     },
     stateMap  = {
       $container  : null,
-      anchor_map  : {},
+      anchor_schema_map  : {
+        page : 'null'
+      },
       what_page     : 'index'
     },
-    initModule,onHashchange,copyAnchorMap,changeAnchorPart;
+    initModule,onHashchange,copyAnchorMap,changeAnchorPart,pageChange;
 
 
   copyAnchorMap = function () {
     return $.extend( true, {}, stateMap.anchor_map );
   };
+
   changeAnchorPart = function ( arg_map ) {
     var
       anchor_map_revise = copyAnchorMap(),
@@ -43,17 +44,14 @@ hey._hash = (function () {
     }
     try {
       $.uriAnchor.setAnchor( anchor_map_revise );
-    }catch ( error ) {
+    } catch ( error ) {
       $.uriAnchor.setAnchor( stateMap.anchor_map,null,true );
       bool_return = false;
     }
 
     return bool_return;
   };
-
-  onHashchange = function(){
-
-    console.log(stateMap.anchor_map);
+  onHashchange = function(event){
     var
       anchor_map_previous = copyAnchorMap(),
       anchor_map_proposed,
@@ -69,48 +67,53 @@ hey._hash = (function () {
     stateMap.anchor_map = anchor_map_proposed;
     _s_page_previous = anchor_map_previous._s_page;
     _s_page_proposed = anchor_map_proposed._s_page;
-    console.log(_s_page_proposed+":"+_s_page_previous);
     if(_s_page_proposed||_s_page_proposed!==_s_page_previous){
       s_page_proposed = anchor_map_proposed.page?anchor_map_proposed.page:stateMap.what_page;
       switch ( s_page_proposed ) {
-          case 'index' :
-            console.log('index');
-            hey.page.page_index.pageIn($('#index'),'left');
-          break;
-          case 'login':
-            console.log('login');
-            hey.page.page_login.pageIn($('#login'),'left');
-          break;
-          case 'detail' :
-            console.log('detail');
-            hey.page.page_detail.pageIn($('#detail'),'left');
-          break;
-          default :
-            delete anchor_map_proposed.page;
-            $.uriAnchor.setAnchor( anchor_map_proposed, null, true );
-        }
-        return false; 
+        case 'index' :
+          console.log('index');
+          hey.page.page_index.pageIn($('#index'));
+        break;
+        case 'login':
+          console.log('login');
+          hey.page.page_login.pageIn($('#login'));
+        break;
+        case 'detail' :
+          console.log('detail');
+          hey.page.page_detail.pageIn($('#detail'));
+        break;
+        default :
+          console.log('four');
+          delete anchor_map_proposed.page;
+          $.uriAnchor.setAnchor( anchor_map_proposed, null, true );
       }
+        return false; 
+    }else{
+      console.log('first page');
     }
+  };
     
-
+  pageChange = function(_hash){
+    changeAnchorPart({
+      page : _hash
+    });
+    return false;
+  };
   initModule = function( $obj ){
     var oA=$("a[data-hash]");
     var _hash;
     for(var i=0;i<oA.length;i++){
       oA.eq(i).on('click',function(){
         _hash=this.dataset.hash;
-        changeAnchorPart({
-          page : _hash 
-        });
+        pageChange(_hash);
       });
-    } 
+    }
 
     $.uriAnchor.configModule({
       schema_map : configMap.anchor_schema_map
-    }); 
+    });
+
     $(window).bind( 'hashchange', onHashchange ).trigger( 'hashchange' );
-    
   };
   return { 
     initModule : initModule

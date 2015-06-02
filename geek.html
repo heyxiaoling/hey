@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=2,user-scalable=yes,minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>黑客帝国文字下落效果</title>
+  <style>
+   *{margin:0;padding:0;}
+  </style>
+ </head>
+ <body>
+  <canvas></canvas>
+  <script>
+  //<![CDATA[
+    var w,h,step=0;
+      cvs=document.querySelector("canvas"),
+      g=cvs.getContext("2d"),
+      letters=new Array(Math.floor(screen.availWidth/10)).join(1).split(""),
+      reset=function(){
+        w=cvs.width=window.innerWidth;
+        h=cvs.height=window.innerHeight;
+        g.fillStyle="rgba(0,0,0,0.05)";         
+        g.strokeStyle="#0F0";
+      },
+      paint=function(){
+        if(step=++step&1)
+        {
+          g.fillRect(0,0,w,h);
+          letters.forEach(function(v,i,arr){
+           if(i*10>w)return; 
+           v=v*1+10;
+           v<h&&g.strokeText(String.fromCharCode(3e4+Math.random()*30),i*10,v);
+           arr[i]=v>h+Math.random()*h*2?0:v;
+          });
+        }
+        run(paint);
+      },
+      run=window.requestAnimationFrame||webkitRequestAnimationFrame||function(f){
+        setTimeout(f,1000/60);
+      };
+    addEventListener("resize",reset,false);
+    reset();
+    paint();
+    //]]>
+  </script>
+ </body>
+</html>
