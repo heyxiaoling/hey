@@ -1,0 +1,1 @@
+ function aaa{ alert(22);}function aaa{ alert(22);}function bbb{ alert(44);}
