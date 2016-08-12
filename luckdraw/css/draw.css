@@ -1,0 +1,338 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+html{
+    font-size: 12px;
+    -webkit-text-size-adjust:none;
+       -moz-text-size-adjust:none;
+        -ms-text-size-adjust:none;
+         -o-text-size-adjust:none;
+            text-size-adjust:none;
+}
+
+body{
+    font-family:"Microsoft Yahei";
+}
+
+ul,ol,dl,dt,dd,li{
+    list-style:none
+}
+
+img{
+    border:0;
+    vertical-align:middle
+}
+
+.clear,.clr{
+    display:block;
+    overflow:hidden;
+    clear:both;
+    height:0;
+    line-height:0;
+    font-size:0
+}
+
+
+.cfx:after,.cBy:after{
+    clear: both;
+    content: ".";
+    display: block;
+    height:1px;
+    overflow:hidden;
+    visibility: hidden
+}
+.cfx:after,.cBy:after{
+    *zoom:1;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+ -webkit-appearance: none!important;
+ margin: 0;
+}
+
+input[type="number"]{
+ -moz-appearance:textfield;
+}
+
+input : -webkit-autofill {
+ background-color : #FAFFBD ;
+ background-image : none ;
+ color : #000 ;
+}
+
+
+/*loading*/
+.loading{
+    /*display: none;*/
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 100;
+}
+
+.loading-bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    background: url(../images/loading-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.loading p{
+    width: 10.4rem;
+    height: 10.4rem;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin:auto;
+    border: 1px solid #e6e6e6;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+}
+.loading p span{
+    width: 10.4rem;
+    height: 10.4rem;
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 1px solid #d7bc9b;
+    border-top:none;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+    -webkit-animation: circle .5s infinite linear;
+            animation: circle .5s infinite linear;
+}
+
+@-webkit-keyframes circle{
+    to{
+        -webkit-transform:rotate(1turn);
+    }
+}
+
+keyframes circle{
+    to{
+        transform:rotate(1turn);
+    }
+}
+
+.draw{
+    min-height: 50.75rem;
+    margin:0 auto;
+    position: relative;
+    background: url(../images/draw-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.content{
+    width: 25rem;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin:0 auto;
+    bottom: 6.25rem;
+}
+
+.content input,.content span{
+    width: 100%;
+    height: 3.66rem;
+    line-height: 3.66rem;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.content input{
+    border: none;
+    background: #fff;
+}
+
+.content span{
+    display: block;
+    background: #d50522;
+    color: #fff;
+}
+
+/*弹窗*/
+.mask{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    background: #000;
+    opacity: 0.8;
+    z-index: 10;
+}
+
+.popup{
+    display: none;
+    width: 23.34rem;
+    height: 17.5rem;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin:auto;
+    padding-top: 15rem;
+    z-index: 20;
+    background: url(../images/popup-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.card{
+    width: 20rem;
+    height: 7.08rem;
+    margin:0 auto;
+    position: relative;
+    background: url(../images/card-bg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.popup > a{
+    display: block;
+    width: 10.25rem;
+    height: 3.41rem;
+    line-height: 3.41rem;
+    margin:3.75rem auto 0;
+    text-align: center;
+    background: #d50522;
+    color: #fff;
+    font-size: 1.25rem;
+    text-decoration:none;
+    -webkit-border-radius: 0.25rem;
+       -moz-border-radius: 0.25rem;
+        -ms-border-radius: 0.25rem;
+         -o-border-radius: 0.25rem;
+            border-radius: 0.25rem;
+}
+
+.card .card-price{
+    overflow: hidden;
+    position: relative;
+    height: 4.66rem;
+}
+
+.card .card-price strong{
+    display: inline-block;
+    width: 8.36rem;
+    height: 4.66rem;
+    overflow: hidden;
+    margin:0 0.8rem 0 0.4rem;
+    font-size: 3.2rem;
+    color: #fff;
+    vertical-align: middle;
+
+}
+
+.card .card-price strong i{
+    height: 2.08rem;
+    line-height: 2.08rem;
+    font-style: normal;
+    font-size: 2.08rem;
+    color: #fff;
+}
+
+.card .card-price span{
+    display: inline-block;
+    width: 6.6rem;
+    height: 2.5rem;
+    padding-top: 1.132px;
+    line-height: 1.25rem;
+    color: #fff;
+    font-size: 1.25rem;
+    vertical-align: middle;
+}
+
+.card .card-price em{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    background: #fa9b46;
+    color: #fff;
+    font-size: 1.25rem;
+    font-style: normal;
+    line-height: 3rem;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-border-radius: 50%;
+       -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+            border-radius: 50%;
+}
+
+.card .card-time{
+    height: 2.3rem;
+    line-height: 2.3rem;
+    color: #9e9e9f;
+    font-size: 1.22rem;
+    text-align: center;
+}
+
+.popup .card-close{
+    display: block;
+    width: 3.6rem;
+    height: 3.6rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 3.6rem;
+    color: #73654d;
+    font-size: 4.4rem;
+    text-decoration:none;
+}
+
+/*优惠卷列表*/
+.coupon{
+    min-height: 50.75rem;
+    margin:0 auto;
+    position: relative;
+    background: url(../images/coupon-bg.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 4rem 0;
+}
+
+.coupon ul li{
+    margin-bottom: 2rem;
+}
+
+.coupon-card{
+    width: 24rem;
+}
+
+.coupon-card .card-price strong{
+    display: inline-block;
+    width: 8.6rem;
+    overflow: hidden;
+    margin:0 2rem 0 0.8rem;
+    font-size: 3.4rem;
+
+}
+
+.coupon-card .card-price span{
+    width: 7.8rem;
+}

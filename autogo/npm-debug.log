@@ -1,0 +1,111 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Software\\node\\node.exe',
+1 verbose cli   'D:\\Software\\node\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.3
+3 info using node@v6.3.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'E:\\mygithub\\hey\\autogo',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir D:\Software\node\node_cache correctMkdir not in flight; initializing
+10 info lifecycle heyxiaoling-autogo@1.0.0~prepublish: heyxiaoling-autogo@1.0.0
+11 silly lifecycle heyxiaoling-autogo@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'D:\\Software\\node\\node_cache\\heyxiaoling-autogo\\1.0.0\\package.tgz',
+12 verbose tar pack   'E:\\mygithub\\hey\\autogo' ]
+13 verbose tarball D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package.tgz
+14 verbose folder E:\mygithub\hey\autogo
+15 verbose addLocalTarball adding from inside cache D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package.tgz
+16 verbose correctMkdir D:\Software\node\node_cache correctMkdir not in flight; initializing
+17 silly cache afterAdd heyxiaoling-autogo@1.0.0
+18 verbose afterAdd D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir D:\Software\node\node_cache correctMkdir not in flight; initializing
+20 verbose afterAdd D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package\package.json written
+21 silly publish { name: 'heyxiaoling-autogo',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: '',
+21 silly publish   main: 'index.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   bin: { autogo: './bin/autogo.js' },
+21 silly publish   author: '',
+21 silly publish   license: 'ISC',
+21 silly publish   dependencies:
+21 silly publish    { bluebird: '^3.4.1',
+21 silly publish      commander: '^2.9.0',
+21 silly publish      'fs-extra': '^0.30.0' },
+21 silly publish   readme: '#heyxiaoling\r\n\r\n#...test ...',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   _id: 'heyxiaoling-autogo@1.0.0',
+21 silly publish   _shasum: '397c94157a90d22cdb06989dc232462c9f66f56b',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name heyxiaoling-autogo
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'heyxiaoling-autogo',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   escapedName: 'heyxiaoling-autogo',
+26 silly mapToRegistry   name: 'heyxiaoling-autogo',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/heyxiaoling-autogo
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading D:\Software\node\node_cache\heyxiaoling-autogo\1.0.0\package.tgz
+30 verbose request uri https://registry.npmjs.org/heyxiaoling-autogo
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 14:24:49
+33 verbose request using bearer token for auth
+34 verbose request id dbd78a7ebec35701
+35 http request PUT https://registry.npmjs.org/heyxiaoling-autogo
+36 info retry will retry, error on last attempt: Error: read ECONNRESET
+37 info attempt registry request try #2 at 14:26:11
+38 verbose request using bearer token for auth
+39 http request PUT https://registry.npmjs.org/heyxiaoling-autogo
+40 http 403 https://registry.npmjs.org/heyxiaoling-autogo
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '95',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Fri, 12 Aug 2016 06:26:13 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-lcy1130-LCY',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1470983172.970973,VS0,VE1000',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating D:\Software\node\node_cache\registry.npmjs.org\heyxiaoling-autogo on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : heyxiaoling-autogo
+44 verbose stack     at makeError (D:\Software\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (D:\Software\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+44 verbose stack     at Request._callback (D:\Software\node\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+44 verbose stack     at Request.self.callback (D:\Software\node\node_modules\npm\node_modules\request\request.js:200:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (D:\Software\node\node_modules\npm\node_modules\request\request.js:1067:10)
+44 verbose stack     at emitOne (events.js:101:20)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (D:\Software\node\node_modules\npm\node_modules\request\request.js:988:12)
+45 verbose statusCode 403
+46 verbose pkgid heyxiaoling-autogo
+47 verbose cwd E:\mygithub\hey\autogo
+48 error Windows_NT 6.1.7601
+49 error argv "D:\\Software\\node\\node.exe" "D:\\Software\\node\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+50 error node v6.3.0
+51 error npm  v3.10.3
+52 error code E403
+53 error "You cannot publish over the previously published version 1.0.0." : heyxiaoling-autogo
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
