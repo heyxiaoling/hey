@@ -1,29 +1,58 @@
-import loader from './load';
-import ajax from './ajax';
-import msg from './msg';
+function ajax(method,url,data,success){
+    var xhr=null;
+     
+    try{
+        xhr=new XMLHttpRequest();
+    }catch(e){
+        xhr=new ActiveXObject('Microsoft.XMLHTTP');
+    }
+     
+    if(method=='get'&&data){
+        url+='?'+data;
+    }
+ 
+    xhr.open(method,url,true);
+     
+    if(method=='get'){
+        xhr.send();
+    }else{
+        xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded');
+        xhr.send(data);
+    }
+ 
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState==4){
+            if(xhr.status==200){
+                success && success(xhr.responseText);
+            }else{
+                alert('出错了'+ xhr.status);
+            }
+        }
+    }
+}
 
 window.onload = function(){
-    let doc = document,
+    var doc = document,
+        load = doc.querySelector('#loading'),
         textInput = doc.querySelector('#textInput'),
         spanSub = doc.querySelector('#spanSub'),
-        mask = doc.querySelector('#popup-mask'),
+        mask = doc.querySelector('#mask'),
         popup = doc.querySelector('#popup'),
         popupClose = doc.querySelector('#card-close'),
         prize =  doc.querySelector('.prizetype'),
         time = doc.querySelector('.card-time');
-
+        
     var txt,btn = true;
 
     //loading..
-    loader();
+    load.style.display = 'none';
 
-    textInput.value = '';
     textInput.addEventListener('keyup',function(e){
         txt = this.value;
     },false);
 
     spanSub.addEventListener('click',function(){
-        let re = /^1\d{10}$/;
+        var re = /^1\d{10}$/;
         if (re.test(txt) && btn) {
             btn = false;
             ajax('get','http://mt.mangocity.com/act/index.php','c=weichat_oauth2&m=win_prize&phone=' + txt,function(data){
@@ -31,28 +60,18 @@ window.onload = function(){
                 data = JSON.parse(data);
                 if(data.code === "1"){
                     data.prizetype ? (prize.innerHTML = data.prizetype) : prize.innerHTML = '';
-                    data.time ? (time.innerHTML = '展会期间有效（请联系现场人员兑换）' ) : time.innerHTML='';
+                    data.time ? (time.innerHTML = '有效期：' + data.time) : time.innerHTML='';
                     cardToggle(true);
                 }else{
-                    msg({
-                        type: 'alert',
-                        text: data.message
-                    });
+                    alert(data.message);
                 }
+                
             });
-        }else if(re.test(txt) && !btn ) {
-            msg({
-                type:'alert',
-                text:"操作频繁"
-            });
-
+        }else if(re.test(txt) && !btn){
+            alert("操作频繁");
         }else{
-            msg({
-                type:'alert',
-                text:"请输入正确的手机号码"
-            });
-
-            
+            alert("请输入正确的手机号码");
+            textInput.focus();
         }
 
     },false);
@@ -71,7 +90,6 @@ window.onload = function(){
             popup.style.display = 'none';
 
         }
-        
     } 
 }
 

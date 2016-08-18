@@ -1,7 +1,12 @@
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var config = require('./webpack.config.js');
-config.entry.app.unshift("webpack-dev-server/client?http://0.0.0.0:4008/", "webpack/hot/dev-server");
+let webpack = require('webpack'),
+    WebpackDevServer = require('webpack-dev-server'),
+    config = require('./webpack.config.js');
+
+
+for(let i in config.entry){
+    config.entry[i].unshift("webpack-dev-server/client?http://0.0.0.0:4008/", "webpack/hot/dev-server")
+}
+
 new WebpackDevServer(webpack(config), {
     hot: true,
     noInfo: false,
