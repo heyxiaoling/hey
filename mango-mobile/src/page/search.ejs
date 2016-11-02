@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"国内机票" || htmlWebpackPlugin.options.title
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+    <% include ./src/page/template/publicHeader %>
+    <div class="mg-content">
+        <div class="mg-tab mg-search-tab mg-mt-15" id="mg-search-tab">
+            <div class="mg-tab-title mg-clear">
+                 <ul>
+                    <li class="mg-tab-title-slide mg-tab-title-slide-active mg-span-6">单程</li>
+                    <li class="mg-tab-title-slide mg-span-6">往返</li>
+                </ul>
+            </div>
+            <div class="mg-tab-wrapper">
+                <div class="mg-tab-slide mg-search-ow" style="display:block;">
+                    <div class="mg-search-content">
+                        <div class="serarch-addr mg-clear">
+                            <div class="search-addr-go mg-span-6"><label>出发城市</label><span>深圳</span></div>
+                            <div class="search-addr-icon"></div>
+                            <div class="search-addr-back mg-span-6"><label>到达城市</label><span></span></div>
+                        </div>
+                        <div class="serarch-date mg-clear">
+                            <div class="search-date-go  mg-span-6"><label>去程日期</label><span></span></div>
+                            <!-- <div class="search-date-back  mg-span-6"></div> -->
+                        </div>
+                        <div class="search-positon mg-txt-center">
+                            <span>经济舱<i class="iconfont icon-moreunfold"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mg-tab-slide mg-search-rt" style="display:none;">
+                    <div class="mg-search-content">
+                        <div class="serarch-addr mg-clear">
+                            <div class="search-addr-go mg-span-6"><label>出发城市</label><span>深圳</span></div>
+                            <div class="search-addr-icon"></div>
+                            <div class="search-addr-back mg-span-6"><label>到达城市</label><span></span></div>
+                        </div>
+                        <div class="serarch-date mg-clear">
+                            <div class="search-date-go  mg-span-6"><label>去程日期</label><span></span></div>
+                            <div class="search-date-back  mg-span-6"><label>去程日期</label><span>04月20日<em>周一</em></span></div>
+                        </div>
+                        <div class="search-positon mg-txt-center">
+                            <span>经济舱<i class="iconfont icon-moreunfold"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+        <div class="mg-search-sub  mg-txt-center">
+            <button class="mg-btn btn-xl btn-radius-mgbg" type="button">开始搜索</button>
+        </div>
+        <div class="mg-condition mg-hide" id="mg-condition">
+            <div class="mg-condition-mask mg-mask"></div>
+            <div class="mg-condition-content mg-bottom-up">
+                <ul>
+                    <li class="mg-condition-slide mg-txt-center">不限</li>
+                    <li class="mg-condition-slide mg-condition-slide-active mg-txt-center">经济舱</li>
+                    <li class="mg-condition-slide mg-txt-center">头等舱/商务舱</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

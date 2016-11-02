@@ -1,0 +1,1428 @@
+{
+  "data": {
+    "flightCity": [
+      {
+        "firstLetter": "热门城市",
+        "cityDetailDatas": [
+          {
+            "citySpell": "SHENZHEN",
+            "cityId": "SZX",
+            "cityName": "深圳",
+            "abbreviation": "SZ"
+          },
+          {
+            "citySpell": "BEIJING",
+            "cityId": "PEK",
+            "cityName": "北京",
+            "abbreviation": "BJ"
+          },
+          {
+            "citySpell": "SHANGHAI",
+            "cityId": "SHA",
+            "cityName": "上海",
+            "abbreviation": "SH"
+          },
+          {
+            "citySpell": "GUANGZHOU",
+            "cityId": "CAN",
+            "cityName": "广州",
+            "abbreviation": "GZ"
+          },
+          {
+            "citySpell": "CHENGDU",
+            "cityId": "CTU",
+            "cityName": "成都",
+            "abbreviation": "CD"
+          },
+          {
+            "citySpell": "HANGZHOU",
+            "cityId": "HGH",
+            "cityName": "杭州",
+            "abbreviation": "HZ"
+          },
+          {
+            "citySpell": "CHANGSHA",
+            "cityId": "CSX",
+            "cityName": "长沙",
+            "abbreviation": "CS"
+          },
+          {
+            "citySpell": "CHONGQING",
+            "cityId": "CKG",
+            "cityName": "重庆",
+            "abbreviation": "CQ"
+          },
+          {
+            "citySpell": "KUNMING",
+            "cityId": "KMG",
+            "cityName": "昆明",
+            "abbreviation": "KM"
+          },
+          {
+            "citySpell": "XIAN",
+            "cityId": "XIY",
+            "cityName": "西安",
+            "abbreviation": "XA"
+          },
+          {
+            "citySpell": "WUHAN",
+            "cityId": "WUH",
+            "cityName": "武汉",
+            "abbreviation": "WH"
+          },
+          {
+            "citySpell": "NANJING",
+            "cityId": "NKG",
+            "cityName": "南京",
+            "abbreviation": "NJ"
+          },
+          {
+            "citySpell": "QINGDAO",
+            "cityId": "TAO",
+            "cityName": "青岛",
+            "abbreviation": "QD"
+          },
+          {
+            "citySpell": "SANYA",
+            "cityId": "SYX",
+            "cityName": "三亚",
+            "abbreviation": "SY"
+          },
+          {
+            "citySpell": "XIAMEN",
+            "cityId": "XMN",
+            "cityName": "厦门",
+            "abbreviation": "XM"
+          }
+        ]
+      },
+      {
+        "firstLetter": "A",
+        "cityDetailDatas": [
+          {
+            "citySpell": "AERSHAN",
+            "cityId": "YIE",
+            "cityName": "阿尔山",
+            "abbreviation": "AES"
+          },
+          {
+            "citySpell": "AGESU",
+            "cityId": "AKU",
+            "cityName": "阿克苏",
+            "abbreviation": "AKS"
+          },
+          {
+            "citySpell": "ALETAI",
+            "cityId": "AAT",
+            "cityName": "阿勒泰",
+            "abbreviation": "ALT"
+          },
+          {
+            "citySpell": "ALI",
+            "cityId": "NGQ",
+            "cityName": "阿里",
+            "abbreviation": "AL"
+          },
+          {
+            "citySpell": "ANKANG",
+            "cityId": "AKA",
+            "cityName": "安康",
+            "abbreviation": "AK"
+          },
+          {
+            "citySpell": "ANQING",
+            "cityId": "AQG",
+            "cityName": "安庆",
+            "abbreviation": "AQ"
+          },
+          {
+            "citySpell": "ANSHAN",
+            "cityId": "AOG",
+            "cityName": "鞍山",
+            "abbreviation": "AS"
+          },
+          {
+            "citySpell": "ANSHUN",
+            "cityId": "AVA",
+            "cityName": "安顺",
+            "abbreviation": "AS"
+          }
+        ]
+      },
+      {
+        "firstLetter": "B",
+        "cityDetailDatas": [
+          {
+            "citySpell": "BAISE",
+            "cityId": "AEB",
+            "cityName": "百色",
+            "abbreviation": "BS"
+          },
+          {
+            "citySpell": "BANGDA",
+            "cityId": "BPX",
+            "cityName": "昌都地区",
+            "abbreviation": "BD"
+          },
+          {
+            "citySpell": "BOAO",
+            "cityId": "BAR",
+            "cityName": "博鳌",
+            "abbreviation": "BO"
+          },
+          {
+            "citySpell": "BAOSHAN",
+            "cityId": "BSD",
+            "cityName": "保山",
+            "abbreviation": "BS"
+          },
+          {
+            "citySpell": "BAOTOU",
+            "cityId": "BAV",
+            "cityName": "包头",
+            "abbreviation": "BT"
+          },
+          {
+            "citySpell": "BIJIE",
+            "cityId": "BFJ",
+            "cityName": "毕节",
+            "abbreviation": "BJ"
+          },
+          {
+            "citySpell": "BAYANNAOER",
+            "cityId": "RLK",
+            "cityName": "巴彦淖尔",
+            "abbreviation": "BYNR"
+          },
+          {
+            "citySpell": "BEIHAI",
+            "cityId": "BHY",
+            "cityName": "北海",
+            "abbreviation": "BH"
+          },
+          {
+            "citySpell": "BEIJING",
+            "cityId": "PEK",
+            "cityName": "北京",
+            "abbreviation": "BJ"
+          },
+          {
+            "citySpell": "BENGBU",
+            "cityId": "BFU",
+            "cityName": "蚌埠",
+            "abbreviation": "BB"
+          },
+          {
+            "citySpell": "BOLE",
+            "cityId": "BPL",
+            "cityName": "博乐",
+            "abbreviation": "BL"
+          },
+          {
+            "citySpell": "BOERTAOLAMENGGUZIZHIZHOU",
+            "cityId": "BPL",
+            "cityName": "博尔塔拉蒙古自治州",
+            "abbreviation": "BETLMGZZZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "C",
+        "cityDetailDatas": [
+          {
+            "citySpell": "CHANGBAISHAN",
+            "cityId": "NBS",
+            "cityName": "长白山",
+            "abbreviation": "CBS"
+          },
+          {
+            "citySpell": "CHANGCHUN",
+            "cityId": "CGQ",
+            "cityName": "长春",
+            "abbreviation": "CC"
+          },
+          {
+            "citySpell": "CHANGDE",
+            "cityId": "CGD",
+            "cityName": "常德",
+            "abbreviation": "CD"
+          },
+          {
+            "citySpell": "CHANGSHA",
+            "cityId": "CSX",
+            "cityName": "长沙",
+            "abbreviation": "CS"
+          },
+          {
+            "citySpell": "CHANGZHI",
+            "cityId": "CIH",
+            "cityName": "长治",
+            "abbreviation": "CZ"
+          },
+          {
+            "citySpell": "CHIZHOU",
+            "cityId": "JUH",
+            "cityName": "池州",
+            "abbreviation": "CZ"
+          },
+          {
+            "citySpell": "CHANGZHOU",
+            "cityId": "CZX",
+            "cityName": "常州",
+            "abbreviation": "CZ"
+          },
+          {
+            "citySpell": "CHAOYANG",
+            "cityId": "CHG",
+            "cityName": "朝阳",
+            "abbreviation": "CY"
+          },
+          {
+            "citySpell": "CHENGDU",
+            "cityId": "CTU",
+            "cityName": "成都",
+            "abbreviation": "CD"
+          },
+          {
+            "citySpell": "CHIFENG",
+            "cityId": "CIF",
+            "cityName": "赤峰",
+            "abbreviation": "CF"
+          },
+          {
+            "citySpell": "CHONGQING",
+            "cityId": "CKG",
+            "cityName": "重庆",
+            "abbreviation": "CQ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "D",
+        "cityDetailDatas": [
+          {
+            "citySpell": "DALI",
+            "cityId": "DLU",
+            "cityName": "大理",
+            "abbreviation": "DL"
+          },
+          {
+            "citySpell": "DALIAN",
+            "cityId": "DLC",
+            "cityName": "大连",
+            "abbreviation": "DL"
+          },
+          {
+            "citySpell": "DANDONG",
+            "cityId": "DDG",
+            "cityName": "丹东",
+            "abbreviation": "DD"
+          },
+          {
+            "citySpell": "DAQING",
+            "cityId": "DQA",
+            "cityName": "大庆",
+            "abbreviation": "DQ"
+          },
+          {
+            "citySpell": "DATONG",
+            "cityId": "DAT",
+            "cityName": "大同",
+            "abbreviation": "DT"
+          },
+          {
+            "citySpell": "DAXIAN",
+            "cityId": "DAX",
+            "cityName": "达州",
+            "abbreviation": "DX"
+          },
+          {
+            "citySpell": "DIQING",
+            "cityId": "DIG",
+            "cityName": "迪庆",
+            "abbreviation": "DQ"
+          },
+          {
+            "citySpell": "DONGYING",
+            "cityId": "DOY",
+            "cityName": "东营",
+            "abbreviation": "DY"
+          },
+          {
+            "citySpell": "DUNHUANG",
+            "cityId": "DNH",
+            "cityName": "敦煌",
+            "abbreviation": "DH"
+          }
+        ]
+      },
+      {
+        "firstLetter": "E",
+        "cityDetailDatas": [
+          {
+            "citySpell": "EERDUOSI",
+            "cityId": "DSN",
+            "cityName": "鄂尔多斯",
+            "abbreviation": "EEDS"
+          },
+          {
+            "citySpell": "ENSHI",
+            "cityId": "ENH",
+            "cityName": "恩施",
+            "abbreviation": "ES"
+          },
+          {
+            "citySpell": "ERLIANHAOTE",
+            "cityId": "ERL",
+            "cityName": "二连浩特",
+            "abbreviation": "ELHT"
+          }
+        ]
+      },
+      {
+        "firstLetter": "F",
+        "cityDetailDatas": [
+          {
+            "citySpell": "FOSHAN",
+            "cityId": "FUO",
+            "cityName": "佛山",
+            "abbreviation": "FS"
+          },
+          {
+            "citySpell": "FUYANG",
+            "cityId": "FUG",
+            "cityName": "阜阳",
+            "abbreviation": "FY"
+          },
+          {
+            "citySpell": "FUYUN",
+            "cityId": "FYN",
+            "cityName": "富蕴",
+            "abbreviation": "FY"
+          },
+          {
+            "citySpell": "FUZHOU",
+            "cityId": "FOC",
+            "cityName": "福州",
+            "abbreviation": "FZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "G",
+        "cityDetailDatas": [
+          {
+            "citySpell": "GANZHOU",
+            "cityId": "KOW",
+            "cityName": "赣州",
+            "abbreviation": "GZ"
+          },
+          {
+            "citySpell": "GEERMU",
+            "cityId": "GOQ",
+            "cityName": "格尔木",
+            "abbreviation": "GEM"
+          },
+          {
+            "citySpell": "GUANGHAN",
+            "cityId": "GHN",
+            "cityName": "广汉",
+            "abbreviation": "GH"
+          },
+          {
+            "citySpell": "GUANGYUAN",
+            "cityId": "GYS",
+            "cityName": "广元",
+            "abbreviation": "GY"
+          },
+          {
+            "citySpell": "GUANGZHOU",
+            "cityId": "CAN",
+            "cityName": "广州",
+            "abbreviation": "GZ"
+          },
+          {
+            "citySpell": "GUILIN",
+            "cityId": "KWL",
+            "cityName": "桂林",
+            "abbreviation": "GL"
+          },
+          {
+            "citySpell": "GUIYANG",
+            "cityId": "KWE",
+            "cityName": "贵阳",
+            "abbreviation": "GY"
+          },
+          {
+            "citySpell": "GUYUAN",
+            "cityId": "GYU",
+            "cityName": "固原",
+            "abbreviation": "GY"
+          }
+        ]
+      },
+      {
+        "firstLetter": "H",
+        "cityDetailDatas": [
+          {
+            "citySpell": "HAERBIN",
+            "cityId": "HRB",
+            "cityName": "哈尔滨",
+            "abbreviation": "HRB"
+          },
+          {
+            "citySpell": "HAIKOU",
+            "cityId": "HAK",
+            "cityName": "海口",
+            "abbreviation": "HK"
+          },
+          {
+            "citySpell": "HAILAER",
+            "cityId": "HLD",
+            "cityName": "海拉尔",
+            "abbreviation": "HLE"
+          },
+          {
+            "citySpell": "HAMI",
+            "cityId": "HMI",
+            "cityName": "哈密",
+            "abbreviation": "HM"
+          },
+          {
+            "citySpell": "HANDAN",
+            "cityId": "HDG",
+            "cityName": "邯郸",
+            "abbreviation": "HD"
+          },
+          {
+            "citySpell": "HANGZHOU",
+            "cityId": "HGH",
+            "cityName": "杭州",
+            "abbreviation": "HZ"
+          },
+          {
+            "citySpell": "HANZHONG",
+            "cityId": "HZG",
+            "cityName": "汉中",
+            "abbreviation": "HZ"
+          },
+          {
+            "citySpell": "HEFEI",
+            "cityId": "HFE",
+            "cityName": "合肥",
+            "abbreviation": "HF"
+          },
+          {
+            "citySpell": "HEIHE",
+            "cityId": "HEK",
+            "cityName": "黑河",
+            "abbreviation": "HH"
+          },
+          {
+            "citySpell": "HENGYANG",
+            "cityId": "HNY",
+            "cityName": "衡阳",
+            "abbreviation": "HY"
+          },
+          {
+            "citySpell": "HETAN",
+            "cityId": "HTN",
+            "cityName": "和田",
+            "abbreviation": "HT"
+          },
+          {
+            "citySpell": "HUAIAN",
+            "cityId": "HIA",
+            "cityName": "淮安",
+            "abbreviation": "HA"
+          },
+          {
+            "citySpell": "HUAIHUA",
+            "cityId": "HJJ",
+            "cityName": "怀化",
+            "abbreviation": "HH"
+          },
+          {
+            "citySpell": "HUANGSHAN",
+            "cityId": "TXN",
+            "cityName": "黄山",
+            "abbreviation": "HS"
+          },
+          {
+            "citySpell": "HUANGYAN",
+            "cityId": "HYN",
+            "cityName": "黄岩",
+            "abbreviation": "HY"
+          },
+          {
+            "citySpell": "HUHEHAOTE",
+            "cityId": "HET",
+            "cityName": "呼和浩特",
+            "abbreviation": "HHHT"
+          }
+        ]
+      },
+      {
+        "firstLetter": "I",
+        "cityDetailDatas": []
+      },
+      {
+        "firstLetter": "J",
+        "cityDetailDatas": [
+          {
+            "citySpell": "JIAMUSI",
+            "cityId": "JMU",
+            "cityName": "佳木斯",
+            "abbreviation": "JMS"
+          },
+          {
+            "citySpell": "JIAN",
+            "cityId": "KNC",
+            "cityName": "吉安",
+            "abbreviation": "JA"
+          },
+          {
+            "citySpell": "JIAYUGUAN",
+            "cityId": "JGN",
+            "cityName": "嘉峪关",
+            "abbreviation": "JYG"
+          },
+          {
+            "citySpell": "JIEYANG",
+            "cityId": "SWA",
+            "cityName": "揭阳",
+            "abbreviation": "JY"
+          },
+          {
+            "citySpell": "JILIN",
+            "cityId": "JIL",
+            "cityName": "吉林",
+            "abbreviation": "JL"
+          },
+          {
+            "citySpell": "JINAN",
+            "cityId": "TNA",
+            "cityName": "济南",
+            "abbreviation": "JN"
+          },
+          {
+            "citySpell": "JINCHANG",
+            "cityId": "JIC",
+            "cityName": "金昌",
+            "abbreviation": "JC"
+          },
+          {
+            "citySpell": "JINDEZHEN",
+            "cityId": "JDZ",
+            "cityName": "景德镇",
+            "abbreviation": "JDZ"
+          },
+          {
+            "citySpell": "JINGGANGSHAN",
+            "cityId": "JGS",
+            "cityName": "井冈山",
+            "abbreviation": "JGS"
+          },
+          {
+            "citySpell": "JINING",
+            "cityId": "JNG",
+            "cityName": "济宁",
+            "abbreviation": "JL"
+          },
+          {
+            "citySpell": "JINJIANG",
+            "cityId": "JJN",
+            "cityName": "晋江",
+            "abbreviation": "JJ"
+          },
+          {
+            "citySpell": "JINZHOU",
+            "cityId": "JNZ",
+            "cityName": "锦州",
+            "abbreviation": "JZ"
+          },
+          {
+            "citySpell": "JIUJIANG",
+            "cityId": "JIU",
+            "cityName": "九江",
+            "abbreviation": "JJ"
+          },
+          {
+            "citySpell": "JIUQUAN",
+            "cityId": "CHW",
+            "cityName": "酒泉",
+            "abbreviation": "JQ"
+          },
+          {
+            "citySpell": "JIUZHAIGOU",
+            "cityId": "JZH",
+            "cityName": "九寨沟",
+            "abbreviation": "JZG"
+          },
+          {
+            "citySpell": "JIXI",
+            "cityId": "JXA",
+            "cityName": "鸡西",
+            "abbreviation": "JX"
+          }
+        ]
+      },
+      {
+        "firstLetter": "K",
+        "cityDetailDatas": [
+          {
+            "citySpell": "KANASI",
+            "cityId": "KJI",
+            "cityName": "喀纳斯",
+            "abbreviation": "KNS"
+          },
+          {
+            "citySpell": "KANGDING",
+            "cityId": "KGT",
+            "cityName": "康定",
+            "abbreviation": "KD"
+          },
+          {
+            "citySpell": "KASHI",
+            "cityId": "KHG",
+            "cityName": "喀什",
+            "abbreviation": "KS"
+          },
+          {
+            "citySpell": "KELAMAYI",
+            "cityId": "KRY",
+            "cityName": "克拉玛依",
+            "abbreviation": "KLMY"
+          },
+          {
+            "citySpell": "KUCHE",
+            "cityId": "KCA",
+            "cityName": "库车",
+            "abbreviation": "KC"
+          },
+          {
+            "citySpell": "KUERLE",
+            "cityId": "KRL",
+            "cityName": "库尔勒",
+            "abbreviation": "KEL"
+          },
+          {
+            "citySpell": "KUNMING",
+            "cityId": "KMG",
+            "cityName": "昆明",
+            "abbreviation": "KM"
+          }
+        ]
+      },
+      {
+        "firstLetter": "L",
+        "cityDetailDatas": [
+          {
+            "citySpell": "LANZHOU",
+            "cityId": "LHW",
+            "cityName": "兰州",
+            "abbreviation": "LZ"
+          },
+          {
+            "citySpell": "LASA",
+            "cityId": "LXA",
+            "cityName": "拉萨",
+            "abbreviation": "LS"
+          },
+          {
+            "citySpell": "LIANCHENG",
+            "cityId": "LCX",
+            "cityName": "连城",
+            "abbreviation": "LC"
+          },
+          {
+            "citySpell": "LIANYUNGANG",
+            "cityId": "LYG",
+            "cityName": "连云港",
+            "abbreviation": "LYG"
+          },
+          {
+            "citySpell": "LIBO",
+            "cityId": "LLB",
+            "cityName": "荔波",
+            "abbreviation": "LB"
+          },
+          {
+            "citySpell": "LIJIANG",
+            "cityId": "LJG",
+            "cityName": "丽江",
+            "abbreviation": "LJ"
+          },
+          {
+            "citySpell": "LINCANG",
+            "cityId": "LNJ",
+            "cityName": "临沧",
+            "abbreviation": "LC"
+          },
+          {
+            "citySpell": "LINYI",
+            "cityId": "LYI",
+            "cityName": "临沂",
+            "abbreviation": "LY"
+          },
+          {
+            "citySpell": "LINZHI",
+            "cityId": "LZY",
+            "cityName": "林芝",
+            "abbreviation": "LZ"
+          },
+          {
+            "citySpell": "LIPING",
+            "cityId": "HZH",
+            "cityName": "黎平",
+            "abbreviation": "LP"
+          },
+          {
+            "citySpell": "LIUZHOU",
+            "cityId": "LZH",
+            "cityName": "柳州",
+            "abbreviation": "LZ"
+          },
+          {
+            "citySpell": "LUOYANG",
+            "cityId": "LYA",
+            "cityName": "洛阳",
+            "abbreviation": "LY"
+          },
+          {
+            "citySpell": "LUZHOU",
+            "cityId": "LZO",
+            "cityName": "泸州",
+            "abbreviation": "LZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "M",
+        "cityDetailDatas": [
+          {
+            "citySpell": "MANSHI",
+            "cityId": "LUM",
+            "cityName": "芒市",
+            "abbreviation": "MS"
+          },
+          {
+            "citySpell": "MANZHOULI",
+            "cityId": "NZH",
+            "cityName": "满洲里",
+            "abbreviation": "MZL"
+          },
+          {
+            "citySpell": "MEIZHOU",
+            "cityId": "MXZ",
+            "cityName": "梅州",
+            "abbreviation": "MZ"
+          },
+          {
+            "citySpell": "MIANYANG",
+            "cityId": "MIG",
+            "cityName": "绵阳",
+            "abbreviation": "MY"
+          },
+          {
+            "citySpell": "MOHE",
+            "cityId": "OHE",
+            "cityName": "漠河",
+            "abbreviation": "MH"
+          },
+          {
+            "citySpell": "MUDANJIANG",
+            "cityId": "MDG",
+            "cityName": "牡丹江",
+            "abbreviation": "MDJ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "N",
+        "cityDetailDatas": [
+          {
+            "citySpell": "NALATI",
+            "cityId": "NLT",
+            "cityName": "那拉提",
+            "abbreviation": "NLT"
+          },
+          {
+            "citySpell": "NANCHANG",
+            "cityId": "KHN",
+            "cityName": "南昌",
+            "abbreviation": "NC"
+          },
+          {
+            "citySpell": "NANCHONG",
+            "cityId": "NAO",
+            "cityName": "南充",
+            "abbreviation": "NC"
+          },
+          {
+            "citySpell": "NANJING",
+            "cityId": "NKG",
+            "cityName": "南京",
+            "abbreviation": "NJ"
+          },
+          {
+            "citySpell": "NANNING",
+            "cityId": "NNG",
+            "cityName": "南宁",
+            "abbreviation": "NN"
+          },
+          {
+            "citySpell": "NANTONG",
+            "cityId": "NTG",
+            "cityName": "南通",
+            "abbreviation": "NT"
+          },
+          {
+            "citySpell": "NANYANG",
+            "cityId": "NNY",
+            "cityName": "南阳",
+            "abbreviation": "NY"
+          },
+          {
+            "citySpell": "NINGBO",
+            "cityId": "NGB",
+            "cityName": "宁波",
+            "abbreviation": "NB"
+          }
+        ]
+      },
+      {
+        "firstLetter": "O",
+        "cityDetailDatas": []
+      },
+      {
+        "firstLetter": "P",
+        "cityDetailDatas": [
+          {
+            "citySpell": "PANZHIHUA",
+            "cityId": "PZI",
+            "cityName": "攀枝花",
+            "abbreviation": "PZH"
+          }
+        ]
+      },
+      {
+        "firstLetter": "Q",
+        "cityDetailDatas": [
+          {
+            "citySpell": "QIEMO",
+            "cityId": "IQM",
+            "cityName": "且末",
+            "abbreviation": "QM"
+          },
+          {
+            "citySpell": "QINGDAO",
+            "cityId": "TAO",
+            "cityName": "青岛",
+            "abbreviation": "QD"
+          },
+          {
+            "citySpell": "QINGYANG",
+            "cityId": "IQN",
+            "cityName": "庆阳",
+            "abbreviation": "QY"
+          },
+          {
+            "citySpell": "QINHUANGDAO",
+            "cityId": "SHP",
+            "cityName": "秦皇岛(山海关)",
+            "abbreviation": "QHD"
+          },
+          {
+            "citySpell": "QINHUANGDAO",
+            "cityId": "BPE",
+            "cityName": "秦皇岛(北戴河)",
+            "abbreviation": "QHD"
+          },
+          {
+            "citySpell": "QIQIHAER",
+            "cityId": "NDG",
+            "cityName": "齐齐哈尔",
+            "abbreviation": "QQHE"
+          },
+          {
+            "citySpell": "QUANZHOU",
+            "cityId": "QHU",
+            "cityName": "泉州",
+            "abbreviation": "QZ"
+          },
+          {
+            "citySpell": "QUZHOU",
+            "cityId": "JUZ",
+            "cityName": "衢州",
+            "abbreviation": "QZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "R",
+        "cityDetailDatas": [
+          {
+            "citySpell": "RIKEZE",
+            "cityId": "RKZ",
+            "cityName": "日喀则",
+            "abbreviation": "RKZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "S",
+        "cityDetailDatas": [
+          {
+            "citySpell": "SHENGNONGJIA",
+            "cityId": "HPG",
+            "cityName": "神农架",
+            "abbreviation": "SNJ"
+          },
+          {
+            "citySpell": "SANYA",
+            "cityId": "SYX",
+            "cityName": "三亚",
+            "abbreviation": "SY"
+          },
+          {
+            "citySpell": "SHANGHAI",
+            "cityId": "SHA",
+            "cityName": "上海",
+            "abbreviation": "SH"
+          },
+          {
+            "citySpell": "SHASHI",
+            "cityId": "SHS",
+            "cityName": "沙市",
+            "abbreviation": "SS"
+          },
+          {
+            "citySpell": "SHENYANG",
+            "cityId": "SHE",
+            "cityName": "沈阳",
+            "abbreviation": "SY"
+          },
+          {
+            "citySpell": "SHENZHEN",
+            "cityId": "SZX",
+            "cityName": "深圳",
+            "abbreviation": "SZ"
+          },
+          {
+            "citySpell": "SHIJIAZHUANG",
+            "cityId": "SJW",
+            "cityName": "石家庄",
+            "abbreviation": "SJZ"
+          },
+          {
+            "citySpell": "SHIYAN",
+            "cityId": "WDS",
+            "cityName": "十堰",
+            "abbreviation": "SY"
+          },
+          {
+            "citySpell": "SIMAO",
+            "cityId": "SYM",
+            "cityName": "思茅",
+            "abbreviation": "SM"
+          },
+          {
+            "citySpell": "SUZHOU",
+            "cityId": "SZV",
+            "cityName": "苏州",
+            "abbreviation": "SZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "T",
+        "cityDetailDatas": [
+          {
+            "citySpell": "TACHENG",
+            "cityId": "TCG",
+            "cityName": "塔城",
+            "abbreviation": "TC"
+          },
+          {
+            "citySpell": "TAIYUAN",
+            "cityId": "TYN",
+            "cityName": "太原",
+            "abbreviation": "TY"
+          },
+          {
+            "citySpell": "TANGSHAN",
+            "cityId": "TVS",
+            "cityName": "唐山",
+            "abbreviation": "TS"
+          },
+          {
+            "citySpell": "TENGCHONG",
+            "cityId": "TCZ",
+            "cityName": "腾冲",
+            "abbreviation": "TC"
+          },
+          {
+            "citySpell": "TIANJIN",
+            "cityId": "TSN",
+            "cityName": "天津",
+            "abbreviation": "TJ"
+          },
+          {
+            "citySpell": "TIANSHUI",
+            "cityId": "THQ",
+            "cityName": "天水",
+            "abbreviation": "TS"
+          },
+          {
+            "citySpell": "TONGHUA",
+            "cityId": "TNH",
+            "cityName": "通化",
+            "abbreviation": "TH"
+          },
+          {
+            "citySpell": "TONGLIAO",
+            "cityId": "TGO",
+            "cityName": "通辽",
+            "abbreviation": "TL"
+          },
+          {
+            "citySpell": "TONGREN",
+            "cityId": "TEN",
+            "cityName": "铜仁",
+            "abbreviation": "TR"
+          },
+          {
+            "citySpell": "TULUFAN",
+            "cityId": "TLQ",
+            "cityName": "吐鲁番",
+            "abbreviation": "TLF"
+          }
+        ]
+      },
+      {
+        "firstLetter": "U",
+        "cityDetailDatas": []
+      },
+      {
+        "firstLetter": "V",
+        "cityDetailDatas": []
+      },
+      {
+        "firstLetter": "W",
+        "cityDetailDatas": [
+          {
+            "citySpell": "WANXIAN",
+            "cityId": "WXN",
+            "cityName": "万县",
+            "abbreviation": "WX"
+          },
+          {
+            "citySpell": "WEIFANG",
+            "cityId": "WEF",
+            "cityName": "潍坊",
+            "abbreviation": "WF"
+          },
+          {
+            "citySpell": "WEIHAI",
+            "cityId": "WEH",
+            "cityName": "威海",
+            "abbreviation": "WH"
+          },
+          {
+            "citySpell": "WENSHAN",
+            "cityId": "WNH",
+            "cityName": "文山壮族苗族自治州",
+            "abbreviation": "WS"
+          },
+          {
+            "citySpell": "WENZHOU",
+            "cityId": "WNZ",
+            "cityName": "温州",
+            "abbreviation": "WZ"
+          },
+          {
+            "citySpell": "WUHAI",
+            "cityId": "WUA",
+            "cityName": "乌海",
+            "abbreviation": "WH"
+          },
+          {
+            "citySpell": "WUHAN",
+            "cityId": "WUH",
+            "cityName": "武汉",
+            "abbreviation": "WH"
+          },
+          {
+            "citySpell": "WUTAISHAN",
+            "cityId": "WUT",
+            "cityName": "五台山",
+            "abbreviation": "WTS"
+          },
+          {
+            "citySpell": "WULANHAOTE",
+            "cityId": "HLH",
+            "cityName": "乌兰浩特",
+            "abbreviation": "WLHT"
+          },
+          {
+            "citySpell": "WULUMUQI",
+            "cityId": "URC",
+            "cityName": "乌鲁木齐",
+            "abbreviation": "WLMQ"
+          },
+          {
+            "citySpell": "WUXI",
+            "cityId": "WUX",
+            "cityName": "无锡",
+            "abbreviation": "WX"
+          },
+          {
+            "citySpell": "WUYISHAN",
+            "cityId": "WUS",
+            "cityName": "武夷山",
+            "abbreviation": "WYS"
+          },
+          {
+            "citySpell": "WUZHOU",
+            "cityId": "WUZ",
+            "cityName": "梧州",
+            "abbreviation": "WZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "X",
+        "cityDetailDatas": [
+          {
+            "citySpell": "XIAMEN",
+            "cityId": "XMN",
+            "cityName": "厦门",
+            "abbreviation": "XM"
+          },
+          {
+            "citySpell": "XIAN",
+            "cityId": "XIY",
+            "cityName": "西安",
+            "abbreviation": "XA"
+          },
+          {
+            "citySpell": "XIANGGELILA",
+            "cityId": "DIG",
+            "cityName": "香格里拉",
+            "abbreviation": "XGLL"
+          },
+          {
+            "citySpell": "XIANGYANG",
+            "cityId": "XFN",
+            "cityName": "襄阳",
+            "abbreviation": "XY"
+          },
+          {
+            "citySpell": "XICHANG",
+            "cityId": "XIC",
+            "cityName": "西昌",
+            "abbreviation": "XC"
+          },
+          {
+            "citySpell": "XILINHAOTE",
+            "cityId": "XIL",
+            "cityName": "锡林浩特",
+            "abbreviation": "XLHT"
+          },
+          {
+            "citySpell": "XINGYI",
+            "cityId": "ACX",
+            "cityName": "兴义",
+            "abbreviation": "XY"
+          },
+          {
+            "citySpell": "XINING",
+            "cityId": "XNN",
+            "cityName": "西宁",
+            "abbreviation": "XN"
+          },
+          {
+            "citySpell": "XISHUANGBANNA",
+            "cityId": "JHG",
+            "cityName": "西双版纳",
+            "abbreviation": "XSBN"
+          },
+          {
+            "citySpell": "XUZHOU",
+            "cityId": "XUZ",
+            "cityName": "徐州",
+            "abbreviation": "XZ"
+          }
+        ]
+      },
+      {
+        "firstLetter": "Y",
+        "cityDetailDatas": [
+          {
+            "citySpell": "YICHUN",
+            "cityId": "YIC",
+            "cityName": "宜春",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YANAN",
+            "cityId": "ENY",
+            "cityName": "延安",
+            "abbreviation": "YA"
+          },
+          {
+            "citySpell": "YANCHENG",
+            "cityId": "YNZ",
+            "cityName": "盐城",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YANJI",
+            "cityId": "YNJ",
+            "cityName": "延吉",
+            "abbreviation": "YJ"
+          },
+          {
+            "citySpell": "YANTAI",
+            "cityId": "YNT",
+            "cityName": "烟台",
+            "abbreviation": "YT"
+          },
+          {
+            "citySpell": "YIBIN",
+            "cityId": "YBP",
+            "cityName": "宜宾",
+            "abbreviation": "YB"
+          },
+          {
+            "citySpell": "YICHANG",
+            "cityId": "YIH",
+            "cityName": "宜昌",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YICHUN",
+            "cityId": "LDS",
+            "cityName": "伊春",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YINCHUAN",
+            "cityId": "INC",
+            "cityName": "银川",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YINING",
+            "cityId": "YIN",
+            "cityName": "伊宁",
+            "abbreviation": "YN"
+          },
+          {
+            "citySpell": "YIWU",
+            "cityId": "YIW",
+            "cityName": "义乌",
+            "abbreviation": "YW"
+          },
+          {
+            "citySpell": "YONGZHOU",
+            "cityId": "LLF",
+            "cityName": "永州",
+            "abbreviation": "YZ"
+          },
+          {
+            "citySpell": "YANGZHOU",
+            "cityId": "YTY",
+            "cityName": "扬州",
+            "abbreviation": "YZ"
+          },
+          {
+            "citySpell": "YULIN",
+            "cityId": "UYN",
+            "cityName": "榆林",
+            "abbreviation": "YL"
+          },
+          {
+            "citySpell": "YUNCHENG",
+            "cityId": "YCU",
+            "cityName": "运城",
+            "abbreviation": "YC"
+          },
+          {
+            "citySpell": "YUSHU",
+            "cityId": "YUS",
+            "cityName": "玉树",
+            "abbreviation": "YS"
+          }
+        ]
+      },
+      {
+        "firstLetter": "Z",
+        "cityDetailDatas": [
+          {
+            "citySpell": "ZHANGJIAJIE",
+            "cityId": "DYG",
+            "cityName": "张家界",
+            "abbreviation": "ZJJ"
+          },
+          {
+            "citySpell": "ZHANGYE",
+            "cityId": "YZY",
+            "cityName": "张掖",
+            "abbreviation": "ZY"
+          },
+          {
+            "citySpell": "ZHANJIANG",
+            "cityId": "ZHA",
+            "cityName": "湛江",
+            "abbreviation": "ZJ"
+          },
+          {
+            "citySpell": "ZHAOTONG",
+            "cityId": "ZAT",
+            "cityName": "昭通",
+            "abbreviation": "ZT"
+          },
+          {
+            "citySpell": "ZHENGZHOU",
+            "cityId": "CGO",
+            "cityName": "郑州",
+            "abbreviation": "ZZ"
+          },
+          {
+            "citySpell": "ZHONGWEI",
+            "cityId": "ZHY",
+            "cityName": "中卫",
+            "abbreviation": "ZW"
+          },
+          {
+            "citySpell": "ZHOUBAI",
+            "cityId": "JIQ",
+            "cityName": "舟白",
+            "abbreviation": "ZB"
+          },
+          {
+            "citySpell": "ZHOUSHAN",
+            "cityId": "HSN",
+            "cityName": "舟山(普陀山)",
+            "abbreviation": "ZS"
+          },
+          {
+            "citySpell": "ZHUHAI",
+            "cityId": "ZUH",
+            "cityName": "珠海",
+            "abbreviation": "ZH"
+          },
+          {
+            "citySpell": "ZUNYI",
+            "cityId": "ZYI",
+            "cityName": "遵义",
+            "abbreviation": "ZY"
+          }
+        ]
+      }
+    ]
+  },
+  "code": "1"
+}

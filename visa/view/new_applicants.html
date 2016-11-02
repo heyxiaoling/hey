@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>签证订单</title>
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/visa_order.css" />
+</head>
+
+<body>
+    <div class="loading" id="loading">
+        <img src="../img/Load.gif">
+    </div>
+    <div class="wrap">
+        <header class="header">
+            <div class="header-l"><a href="javascript:;" id="back" class="icon icon-back">&#xe600;</a></div>
+            <div class="header-c">
+                <strong>新添加申请人</strong>
+            </div>
+            <div class="header-r">
+                
+            </div>
+        </header>
+        <div class="content">
+            <div class="new-applicants">
+                <ul class="list-ul list-br-b">
+                    <li class="list-ul-li">
+                        <a href="javascript:;" class="list-ul-li-a box-hori">
+                            <label>中文姓名</label>
+                            <p class="box-hori-1"><input type="text" class="name" placeholder="请输入与身份证一致的姓名"></p>
+                        </a>
+                    </li>
+                    <li class="list-ul-li">
+                        <a href="javascript:;" class="list-ul-li-a  box-hori">
+                            <label>身份证明</label>
+                            <p class="visaindentitytype box-hori-1"></p>
+                            <span class="identity"><i class="icon icon-arrow-down">&#xe609;</i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="identity-list">
+        <div class="identity-list-bg mask box-opin"></div>
+        <ul class="list-ul list-br-c box-bottom-up">
+        </ul>
+    </div>
+    <script src="../js/zepto_1.1.3.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/new_applicants.js"></script>
+</body>
+</html>

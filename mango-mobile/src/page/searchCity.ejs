@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+	"title":"选择城市" || htmlWebpackPlugin.options.title
+};
+%>
+	<head>
+		<meta charset="utf-8">
+		<% include ./src/page/template/publicMeta %>
+		<title><%=cfg.title %></title>
+	</head>
+
+	<body>
+		<% include ./src/page/template/publicHeader %>
+		<section id="search_input">
+					<form id="search_input_form">
+						<input id="search_input_city" type="search" placeholder="输入城市选择名(如北京)" />
+						<div id="search_list">
+							<div class="search_list"></div>
+						</div>
+					</form>
+
+				</section>
+		<div class="mg-content">
+			<div id="content">
+				
+				<section id="search_content">
+					<div id="search_content_left">
+						<section id="search_content_left_title">
+							<div id="CurrentCity" class="citytop">
+								<h3>当前定位城市</h3>
+								<div class="mg-btn btn-sm btn-radius-nobg" id="Current_City">
+									<span class="btn-local"></span>
+								</div>
+							</div>
+							<div id="HistoryCity" class="citytop">
+								<h3>历史选择</h3>
+								<div class="mg-btn btn-sm btn-radius-uncheck" id="HistoryCitynone">无</div>
+							</div>
+							<div id="HotCity" class="citytop">
+								<h3>热门城市</h3>
+								
+								
+							</div>
+						</section>
+						<section id="search_content_left_content">
+								<ul class="dest_list" id="dest_list">
+								
+							</ul>
+
+							
+						</section>
+					</div>
+					<div id="search_content_right">
+						<div id="body_content_fixed">
+							<div>热门</div>
+							<div>城市</div>
+							
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+	</body>
+	<!--[[ 列表模板-->
+
+</html>

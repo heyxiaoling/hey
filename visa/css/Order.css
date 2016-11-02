@@ -1,0 +1,63 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+html,body{width:100%;height: 100%;background-color: #f6f6f6;position: relative;font-family: "微软雅黑";}
+#body{width: 100%;height: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+#body_content{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;display: -webkit-box;display: -ms-flexbox;display: flex;}
+#cover{width:100%;height: 100%;background-color: white;position: absolute;display: -webkit-flex;-ms-flex-pack:center;justify-content:center; -ms-flex-align:center; align-items:center;z-index: 99999;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center; }
+header{width: 100%;height: 45px;font-weight: 900;text-align: center;line-height: 45px;background-color:white;position: relative;overflow: hidden;}
+header img{position: absolute;bottom: 0px;left: 0;z-index: 9999;}
+.Details_pic{width: 100%;height: 140px;}
+.Order_pic{width: 100%;height: 120px;position: relative;}
+.Order_pic img{width: 100%;height: 100%;}
+.Order_Data{display: -webkit-box;display: -ms-flexbox;display: flex;background-color: white;-webkit-box-align: center;-ms-flex-align: center;align-items: center;height: 50px;padding-left: 13px;box-sizing: border-box;}
+.Order_Data_pic{width: 26px;height: 26px;font-family:"iconfont" !important;font-size: 25px !important;color: #1bcc88;display: block;}
+#wrapper{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;overflow: scroll;} 
+#Order_Data_content{border: none;margin-left: 10px;height: 50px;font-size: 18px;width: 100%;display: block;}
+.Order_Buy_num{height: 50px;margin: 10px 0;display: -webkit-box;display: -ms-flexbox;display: flex;background-color: white;-webkit-box-align: center;-ms-flex-align: center;align-items: center;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;}
+.Order_Buy_num_font img{width: 23px;height: 23px;}
+.Order_Buy_num_font{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;}
+.Order_Buy_num_font span{margin-left: 10px;font-size: 18px;}
+.Order_Buy_num_con{width: 113px;height: 30px;margin-right: 13px;display: -webkit-box;display: -ms-flexbox;display: flex;border: 1px solid #eaeaea;}
+.Order_Buy_num_con span{height: 30px;display: block;text-align: center;line-height: 25px;font-size: 30px;}
+#Order_Buy_num_con_reduce{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;background-color: #f6f6f6;color: #b8b8b8;}
+#Order_Buy_num_con_num{-webkit-box-flex: 2;-ms-flex: 2;flex: 2;font-size: 22px !important;line-height: 32px !important;}
+#Order_Buy_num_con_plus{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;background-color: #f6f6f6;color: #b8b8b8;}
+.Order_information{min-height: 215px;background-color: white;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;padding: 0 13px;box-sizing: border-box;}
+.Order_information_in{height: 40px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;font-size: 18px;margin-bottom: 13px;}
+.Order_information_in span:last-child{margin-left: 10px;}
+.Order_information_content{height: 50px;border-bottom: 1px solid #eaeaea;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;} 
+.Order_information_content input{border: none;margin-left: 25px;height: 50px;font-size: 14px;-webkit-box-flex: 1;-ms-flex: 1;flex: 1;}
+.Order_information_content span{width: 53px;height: 50px;line-height: 48px;}
+.Order_foot{margin-top: 10px;height: 50px;}
+
+.Order_foot_information{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;}
+.Order_foot_information img{width: 23px;height: 23px;margin-bottom: 3px;margin-right: 13px;}
+.Order_foot_information span{font-size: 18px;}
+.Order_foot_price{padding-left: 13px;box-sizing: border-box;display: -webkit-box;display: -ms-flexbox;display: flex;height: 50px;position: fixed;bottom: 0;left: 0;right: 0;background-color: white;}
+.Order_foot_price_num{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;-webkit-box-flex: 1;-ms-flex: 1;flex: 1;height:36px;}
+#Order_foot_price_buy{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;line-height:50px;text-align: center;color: white;background-color:#ff6600;}
+#Order_foot_price_number{color: #FF6600;font-size: 24px;display: block;margin-bottom: -3px;}
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg') format('svg'); /* iOS 4.1- */
+}
+ .confirm_header{font-family:"iconfont" !important;position: absolute;height: 100%;left:0;width: 10%;color: #19cc88;} 
+#Order_pic_content{position: absolute;width: 100%;height: 120px;box-sizing: border-box;padding: 0 13px;color: white;line-height:120px;text-align: center;}
+#Bomb_box{position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 99999;display: none;}
+#Bomb_box_cover{width: 100%;height: 100%;background-color: black;opacity: 0.4;}
+#Bomb_box_content{width: 60%;height: 143px;position: absolute;left: 50%;top: 50%;margin-left:-30%;margin-top: -72px;background-color: white;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;border-radius: 8px;}
+#Bomb_box_content_title{-webkit-box-flex: 2.5;-ms-flex: 2.5;flex: 2.5;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;text-align: center;font-size: 14px;box-sizing: border-box;padding: 0 12px;border-bottom: 1px solid #E0E0E0;}
+#Bomb_box_content_foot{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;display: -webkit-box;display: -ms-flexbox;display: flex;display: flex;-webkit-box-align: center;-ms-flex-align: center;align-items: center;height: 30px;}
+#Bomb_box_content_foot a{color: #007AFF;-webkit-box-flex: 1;-ms-flex: 1;flex: 1;text-align: center;line-height: 30px;height: 30px;width: 50%;display: block;}
+#Bomb_box_content_phone{border-right: 1px solid #E0E0E0;}
+#Order_Data_content::-webkit-input-placeholder {
+color:black;
+font-family: "微软雅黑";
+} 
+
+
+
+  

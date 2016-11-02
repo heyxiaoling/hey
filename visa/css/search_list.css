@@ -1,0 +1,62 @@
+*{margin: 0;padding: 0;}
+a{text-decoration: none;}
+html,body{width:100%;height: 100%;background-color: #f6f6f6;position: relative;font-family: "微软雅黑";}
+#body{width: 100%;height: 100%;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
+#body_content{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;position: relative;display: -webkit-box;display: -ms-flexbox;display: flex;}
+#cover{width:100%;height: 100%;background-color: white;position: absolute;display: -webkit-flex;-ms-flex-pack:center;justify-content:center; -ms-flex-align:center; align-items:center;z-index: 99999;display: -webkit-box;-webkit-box-pack:center;-webkit-box-align:center; }
+header{width: 100%;height: 45px;font-weight: 900;text-align: center;line-height: 45px;background-color:white;position: relative;overflow: hidden;}
+header img{position: absolute;bottom: 0px;left: 0;z-index: 9999;}
+#wrapper{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;overflow: scroll;position: relative;}
+.search_list_nav{display: -webkit-box;display: -ms-flexbox;display: flex;background-color: white;border-bottom: 1px solid #eaeaea;height: 40px;line-height: 40px;color: #eaeaea;}
+.search_list_nav div{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;color: #656565;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: center;-ms-flex-pack: center;justify-content: center;position: relative;}
+@font-face {font-family: "iconfont";
+  src: url('../font/iconfont.eot'); /* IE9*/
+  src: url('../font/iconfont.eot') format('embedded-opentype'), /* IE6-IE8 */
+  url('../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../font/iconfont.svg') format('svg'); /* iOS 4.1- */
+} 
+.visa_type_color{color: #1fcc8c !important; }  
+.iconfont{ 
+    font-family:"iconfont" !important;
+    font-size:12px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;color:#656565;margin-left: 5px;display: block;-webkit-transform: rotate(180deg);transform: rotate(180deg);}     
+.iconfont_rotate{-webkit-transform: rotate(0deg) !important;transform: rotate(0deg) !important;color: #1fcc8c;}
+.Tourist_visa_cover{position: absolute;width: 100%;height: 100%;z-index: 999;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;display: none;}
+.Tourist_visa_content{height:auto;-webkit-animation: move 1s linear forwards;animation: move 1s linear forwards;} 
+.Tourist_visa_content div{background-color: white;border-bottom: 1px solid #eaeaea;height:44px;display: -webkit-box;display: -ms-flexbox;display: flex;color: #666666;}
+.Tourist_cover{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;background-color: black;opacity: .5;height: 100%;}
+.confirm,.confirm_sort{font-family:"iconfont" !important;}
+.confirm{font-family:"iconfont" !important;visibility: hidden;}
+.Tourist_visa_content .Tourist_visa span:first-child{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;text-align: center;line-height: 44px;}
+.Tourist_visa_content .Tourist_visa span:last-child{-webkit-box-flex: 5;-ms-flex: 5;flex: 5;line-height: 44px;font-size: 14px;}
+.Tourist_visa_content .Tourist_visa span{display: block;}
+.Tourist_visa:hover{color: #1fcc8c;visibility: visible !important;}
+.Tourist_visa:hover .confirm{color: #1fcc8c;visibility: visible;}
+#type_Unlimited{height: 35px;margin-bottom: 4px;color: #333333;line-height: 35px;padding-left: 16px;box-sizing: border-box;font-size: 14px;}
+#type_Unlimited:hover{color: #1fcc8c;}
+.Tourist_visa_content ul{list-style: none;height: auto;border-bottom: 1px solid #ebebeb;background-color: white;overflow: hidden;}
+.Tourist_visa_content ul li{width:20%;line-height: 34px;text-align: center;border-right: 1px solid #ebebeb;font-size: 14px;border-bottom: 1px solid #ebebeb;float: left;box-sizing: border-box;}
+.Tourist_visa_content ul:last-child li:last-child{border-right: 1px solid #ebebeb !important;}
+.Tourist_visa_content ul li:last-child{border:none !important;}
+.Tourist_visa_content ul li:hover{color: #1ACCB7;}
+.confirm_sort{font-family:"iconfont" !important;}
+.type_comprehensive{display: -webkit-box;display: -ms-flexbox;display: flex;}
+.type_comprehensive span:first-child{-webkit-box-flex: 1;-ms-flex: 1;flex: 1;line-height: 44px;text-align: center;visibility: hidden;}
+.type_comprehensive span:last-child{-webkit-box-flex: 5;-ms-flex: 5;flex: 5;line-height: 44px;font-size: 14px;}
+.type_comprehensive:hover{color: #1fcc8c;}
+.type_comprehensive:hover .confirm_sort{color: #1fcc8c;visibility: visible;}
+.search_list_content{min-height: 90px;padding-left:14px;padding-top:10px ;box-sizing: border-box;background-color: white;border-bottom: 1px solid #ebebeb;padding-right: 14px;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;-ms-flex-pack: distribute;justify-content: space-around;-webkit-box-pack: justify;padding-bottom: 5px;}
+.search_list_content_Label span{border: 1px solid #1aca8a;border-radius: 3px;font-size: 12px;color:#1aca8a;margin-left: 10px;}
+.search_list_content_Label span:first-child{margin-left: 0px;}
+.confirm_Reserve{font-family:"iconfont" !important;}
+.search_list_content_bottom{display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-pack: justify;-ms-flex-pack: justify;justify-content: space-between;-webkit-box-align: end;-ms-flex-align: end;align-items: flex-end;color: #666666;margin-top: -5px;}
+.search_list_content_bottom_left{font-size: 12px;}
+.search_list_content_bottom_right span:first-child{color:#fb6300;font-size: 12px;margin-right: -4px;}
+.search_list_content_bottom_right span:last-child{font-size: 16px;color:#fb6300;}
+.confirm_header{font-family:"iconfont" !important;position: absolute;height: 100%;left:0;width: 10%;color: #19cc88;} 
+.wrapper_title{width: 100%;color: #999999;box-sizing: border-box;padding-top: 50%;text-align: center;}
+
+

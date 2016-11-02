@@ -1,0 +1,519 @@
+@import "variables";
+
+// 基础变量
+
+//[[主样式，统一浏览器默认样式，及简写样�
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: @font-size-txt;
+  line-height: @line-height-txt;
+  color: @color-txt;
+  background-color: @color-bg;
+}
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div,ul, ol, li , dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, p, pre, small, span, strong, u, var {
+  margin: 0;
+  padding: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block
+}
+ul, ol, li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle
+}
+button, input, select, textarea {
+  font-size: 100%;
+  vertical-align: middle;
+  outline: none
+}
+
+/*去掉Webkit(chrome)浏览器中input(文本框)或textarea的黄色焦点框*/
+input, button, select, textarea {
+  outline: none;
+  font-family: "Microsoft YaHei"
+}
+textarea {
+  resize: none;
+}
+
+/*移除HTML5 input在type="number"时的上下小箭头*/
+
+/*在chrome下：*/
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
+}
+
+/*Firefox下：*/
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/*chrome 表单自动填充后，input文本框的背景会变成黄色的，通过审查元素可以看到这是由于chrome会默认给自动填充的input表单加上input:-webkit-autofill私有属性，然后对其赋予以下样式：*/
+input:-webkit-autofill {
+  background-color: #FAFFBD;
+  background-image: none;
+  color: #000;
+}
+a {
+  text-decoration: none;
+  color: @color-link;
+}
+input[type=color], input[type=date], input[type=datetime-local], input[type=datetime], input[type=email], input[type=month], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=time], input[type=url], input[type=week], select, textarea {
+  line-height: 21px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  -webkit-user-select: text;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 3px;
+  outline: 0;
+  background-color: #fff;
+  -webkit-appearance: none;
+}
+input, select, textarea {
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: @font-size-txt;
+  -webkit-tap-highlight-color: transparent;
+}
+h1, .h1 {
+  font-size: @font-size-h1;
+}
+h2, .h2 {
+  font-size: @font-size-title;
+}
+h3, .h3 {
+  font-size: @font-size-txt;
+}
+h4, .h4 {
+  font-size: @font-size-tag;
+}
+h5, .h5 {
+  font-size: @font-size-min;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5 {
+  line-height: 1;
+  margin-top: 5px;
+  margin-bottom: 5px
+}
+.mg-fl {
+  float: left !important;;
+}
+.mg-fr {
+  float: right !important;;
+}
+.mg-mt-15 {
+  margin-top: 15px !important;
+}
+.mg-mt-10 {
+  margin-top: 10px !important;
+}
+.mg-show{
+  display: block !important;
+}
+.mg-hide{
+  display: none !important;
+}
+.mg-inline-show{
+  display: inline-block !important;
+}
+.mg-visibility-show{
+  visibility: visible !important;
+}
+.mg-visibility-hide{
+  visibility: hidden !important;
+}
+.mg-txt-center {
+  text-align: center !important;
+}
+.mg-txt-left {
+  text-align: left !important;
+}
+.mg-txt-right {
+  text-align: right !important;
+}
+.mg-strong {
+  font-weight: bold !important;
+}
+.mg-clear:after, .mg-clear:before {
+  display: table;
+  content: ' '
+}
+.mg-clear:after {
+  clear: both
+}
+.mg-bg-white {
+  background-color: #FFF;
+}
+.mg-color-mg {
+  color: @color-mg;
+}
+.mg-color-title {
+  color: @color-title;
+}
+.mg-color-txt {
+  color: @color-txt;
+}
+.mg-color-sec {
+  color: @color-sec;
+}
+.mg-title {
+  font-size: @font-size-title;
+  font-weight: 500;
+  line-height: 44px;
+  position: absolute;
+  display: block;
+  width: 100%;
+  margin: 0 -10px;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: @color-title;
+}
+.mg-title>i.iconfont {
+  color: inherit;
+  margin: 0px;
+  padding: 0px !important;
+}
+.mui-fullscreen {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+//]]
+
+//[[头部样式
+.mg-bar-nav {
+  top: 0;
+  border-bottom: 1px solid @color-border;
+}
+.mg-bar {
+  position: fixed;
+  z-index: @z-index-bar;
+  right: 0;
+  left: 0;
+  height: 44px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: @color-content;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.mg-bar-nav.mg-bar>a:active {
+  background: @color-link-active;
+}
+.mg-bar-nav.mg-bar .iconfont ,.mg-bar-nav.mg-bar .mg-head-menu {
+  margin-right: -10px;
+  margin-left: -10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.mg-bar .iconfont, .mg-bar .mg-head-menu {
+  line-height: 24px;
+  position: relative;
+  z-index: @z-index-bar-up;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: inherit;
+}
+.mg-bar .iconfont {
+  color: @color-mg;
+  font-size: 24px;
+}
+.mg-header-btn{
+  .mg-fr;
+  margin-right: -15px;
+  .mg-txt-right;
+  font-size: 16px;
+  font-family: inherit;
+  line-height: 44px;
+  color: @color-txt;
+}
+//]] 头部样式
+
+//[[主体样式
+.mg-content {
+  background-color: @color-bg;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.mg-bar-tab~.mg-content {
+  padding-bottom: 50px;
+}
+.mg-bar-nav~.mg-content {
+  padding-top: 44px;
+}
+.mg-content .mg-group-title {
+  margin: 15px 0 10px 15px;
+}
+//]]
+
+//[[底部样式
+.mg-bar-tab {
+  bottom: 0;
+  display: table;
+  width: 100%;
+  height: 50px;
+  padding: 0;
+  table-layout: fixed;
+  border-top: 1px solid @color-border;
+  border-bottom: 0;
+  -webkit-touch-callout: none;
+  background-color: @color-content;
+}
+.mg-bar-tab .mg-tab-item {
+  display: table-cell;
+  overflow: hidden;
+  width: 1%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mg-bar-tab .mg-tab-item>.iconfont {
+  padding-top: 4px;
+  padding-bottom: 0px;
+  display: block;
+}
+//[[底部样式
+
+//[[列表样式
+.mg-content>.mg-table-view:first-child {
+  margin-top: 10px;
+}
+.mg-table-view {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  background-color: #fff;
+}
+.mg-table-view-cell {
+  position: relative;
+  overflow: hidden;
+  padding: 11px 15px;
+  -webkit-touch-callout: none;
+}
+.mg-table-view-cell:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  background-color: @color-border;
+}
+.mg-table-view-cell:last-child:after {
+  height: 0;
+}
+// TODO 暂定按钮className �mg-btn
+.mg-table-view-cell>a:not(.mg-btn) {
+  position: relative;
+  display: block;
+  margin: -11px -15px;
+  padding: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: inherit;
+}
+.mg-table-view-cell>a:active {
+  background-color: @color-link-active;
+}
+.mg-navigate-right:after {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  display: inline-block;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-decoration: none;
+  color: #bbb;
+  -webkit-font-smoothing: antialiased;
+  right: 15px;
+  content: '\e602';
+}
+.mg-table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+//]]
+
+
+//[[遮罩
+.mg-mask {
+  position: fixed;
+  z-index: @z-index-mask;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  filter:alpha(opacity=0);
+  animation: mask-fadein 0.2s ease both;
+  -moz-animation: mask-fadein 0.2s ease both;	    /* Firefox */
+  -webkit-animation: mask-fadein 0.2s ease both;	/* Safari 和 Chrome */
+  -o-animation: mask-fadein 0.2s ease both;	        /* Opera */
+}
+//]]
+
+
+//[[loading相关样式
+.mg-loading {
+  width: 100%;
+  position: fixed;
+  top: 40%;
+  color: @color-sec;
+  font-size: @font-size-tag;
+  opacity: 0.7;
+  z-index: @z-index-pop;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+.mg-loading .container {
+  width: 80px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+.mg-loading i {
+  height: 80px;
+  display: block;
+  background: url("../img/loading.gif") no-repeat 10px 10px #FFF;
+}
+.mg-loading span {
+  width: 100%;
+  padding-bottom: 10px;
+  display: block;
+  text-align: center;
+}
+//]]
+
+/*动画*/
+.mg-fade-in{-webkit-animation:fadein 0.5s .2s ease both;-moz-animation:fadein 0.5s .2s ease both;}
+.mg-fade-out{-webkit-animation:fadeout 1s .2s ease both;-moz-animation:fadeout 1s .2s ease both;}
+@-webkit-keyframes fadein{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+@-moz-keyframes fadein{
+  0%{opacity:0}
+  100%{opacity:1}
+}
+@-webkit-keyframes mask-fadein{
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-moz-keyframes mask-fadein{
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-webkit-keyframes fadeout{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+@-moz-keyframes fadeout{
+  0%{opacity:1}
+  100%{opacity:0}
+}
+@keyframes mask-fadein {
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-moz-keyframes mask-fadein { /* Firefox */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-webkit-keyframes mask-fadein { /* Safari 和 Chrome */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+@-o-keyframes mask-fadein { /* Opera */
+  0%{opacity:0}
+  100%{opacity:.3}
+}
+
+/* 从顶部淡入与淡出－－begin */
+.mg-bottom-up{-webkit-animation:bottomup 0.3s 0.1s ease both;-moz-animation:bottomup 0.3s 0.1s ease both;}
+.mg-bottom-down{-webkit-animation:bottomdown 0.3s 0.1s ease both;-moz-animation:bottomdown 0.3s 0.1s ease both;}
+@-webkit-keyframes bottomup{
+  0%{opacity:0;bottom:-100%;}
+  100%{opacity:1;bottom:0;}
+}
+@-moz-keyframes bottomup{
+    0%{opacity:0;bottom:100%;}
+  100%{opacity:1;bottom:0;}
+}
+@-webkit-keyframes bottomdown{
+  0%{opacity:1;bottom:0;}
+  100%{opacity:0;bottom:-100%;}
+}
+@-moz-keyframes bottomdown{
+  0%{opacity:1;bottom:0;}
+  100%{opacity:0;bottom:-100%;}
+}
+
+/*tips*/
+.mg-bottom-tips{
+  width: 100%;
+  position: fixed;
+  bottom:44px;
+  text-align: center;
+  z-index: @z-index-pop;
+}
+.mg-bottom-tips span{
+  display: block;
+  width: 60%;
+  height: 36px;
+  margin-left: 20%;
+  margin-bottom: 15px;
+  
+  line-height: 36px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3); 
+  color: #fff;
+  text-align: center;
+}
+
+
+
+/**
+ * 基础控件引入
+ */
+@import "grid";
+// 网格布局
+@import "iconfont";
+// 字体图标
+
+@import "mg-button";
+//按钮
+@import "inputgroup";
+// 表单组件

@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+		<title></title>
+		<link rel="stylesheet" href="../css/Order.css" />
+		<link rel="stylesheet" href="../css/zepto.mdater.css" />
+	
+	</head> 
+	<body>
+<div id="cover"><img src="../img/Load.gif"></div>
+		<div id="body">
+					<div id="Bomb_box">
+			<div id="Bomb_box_cover">				
+			</div>
+			<div id="Bomb_box_content">
+				
+			<p id="Bomb_box_content_title">您的办签数量较大，请拨打客服电话预定。</p>
+				<div id="Bomb_box_content_foot">
+				<a href="tel:4006640066" id="Bomb_box_content_phone">拨打电话</a>
+				<a id="Bomb_box_content_remove">取消</a>	
+				</div>
+				
+			</div>
+		</div>	
+			<header><span class="confirm_header">&#xe600;</span><span class="header_content">填写订单</span><img src="../img/border_bottom.png"></header>
+				<section id="body_content">
+<div id="wrapper">
+   <div id="scroller">
+	<section class="Order_pic">
+		<div id="Order_pic_content">
+			
+		</div>
+		<img src="../img/banner1.gif" />
+	</section>
+
+<section class="Order_Data">
+<span class="Order_Data_pic">&#xe613;</span>
+<input type="text" placeholder="请选择出行日期" id="Order_Data_content" readonly="readonly"/>
+</section>
+  <section class="Order_Buy_num">
+  	<div class="Order_Buy_num_font">
+  		<span class="Order_Data_pic">&#xe615;</span>
+  		<span>请选择购买份数</span>
+  	</div>
+  	<div class="Order_Buy_num_con">
+  		<span id="Order_Buy_num_con_reduce">-</span>
+  		<span id="Order_Buy_num_con_num">1</span>
+  		<span id="Order_Buy_num_con_plus">+</span>
+  	</div>
+  </section>
+  <section class="Order_information">
+  	<div class="Order_information_in">
+  		<span class="Order_Data_pic">&#xe614;</span>
+  		<span>联系人信息</span>
+  	</div>
+  	<div class="Order_information_content">
+  		<span>&nbsp;姓&nbsp;&nbsp;&nbsp;名</span>
+  		<input type="text" placeholder="用于我们联系您" id="Order_Data_content_name"/>
+  	</div>
+  	<div class="Order_information_content">
+  		<span>&nbsp;手机号</span>
+  		<input type="text" placeholder="用于接收短信" id="Order_Data_content_message"/>
+  	</div>
+  	<div class="Order_information_content">
+  		<span>&nbsp;邮&nbsp;&nbsp;&nbsp;箱</span>
+  		<input type="text" placeholder="接收办签资料或电子签" id="Order_Data_content_mail"/>
+  	</div>
+  	  	<div class="Order_information_content" style="border: none;">
+  		<span>&nbsp;地&nbsp;&nbsp;&nbsp;址</span>
+  		<input type="text" placeholder="接收签证以及返还资料" id="Order_Data_content_address"/>
+  	</div>
+  </section>
+  <section class="Order_foot">
+
+  	
+  </section>
+  <div class="Order_foot_price">
+  		<div class="Order_foot_price_num">
+  			<span>总金额:</span>
+  			<span style="color:#ff6600">￥</span>
+  			<span id="Order_foot_price_number"></span>
+  		</div>
+  		<div id="Order_foot_price_buy">提交订单</div>
+  	</div>
+  </div>
+</div>
+   </section>
+  </div>
+<script src="../js/zepto_1.1.3.js"></script>
+<script src="../js/zepto.mdater.js"></script>
+<script type="text/javascript" src="../js/order.js" ></script>
+	</body>
+</html>

@@ -1,0 +1,68 @@
+@import "../common/variables";
+
+.mg-edit-passenger {
+    font-size: @font-size-tag;
+    font-family: "microsoft yahei";
+    color: @color-txt;
+    line-height: 1;
+}
+.mg-edit-passenger i {
+    position: absolute;
+    float: right;
+    margin-right: 15px;
+    right: 0;
+    color: @color-mg; 
+    line-height: 2.5;
+    z-index: @z-index-up;
+}
+.mg-edit-passenger a {
+    position: absolute;
+    width: 100%;
+    color:@color-txt;
+    line-height: 2.5;
+}
+.passenger-edit{
+    font-size: @font-size-txt;
+    line-height: 1;
+}
+.passenger-edit > input{
+    position: relative;
+    padding-right: 10px;
+    color: @color-txt;
+}
+.mg-passenger-type,.mg-document-type{
+    display:block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    z-index:@z-index-mask-up;
+}
+ 
+.mg-passenger-type li{
+    padding: 8px 0;   
+    border-bottom: 1px solid @color-border;
+}
+.mg-passenger-type li:first-child{
+    color: @color-title;
+    font-weight: bold;
+    border-top:1px solid @color-border;
+}
+.type-document{
+    font-size: @font-size-txt;
+    line-height: 1.5;
+}
+//.type-document-active{
+//  color: @color-mg; 
+//}
+
+//[[
+.mg-hidden {
+    position: absolute;
+    visibility: hidden;
+}
+.mg-visible {
+   visibility: visible;
+}
+//]]

@@ -1,0 +1,42 @@
+html {
+  font-family: sans-serif;
+}
+iframe {
+  border: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.mg-content {
+  height: 100%;
+  width: 100%;
+}
+/**
+ * iframe 父及容器
+ * -webkit-overflow-scrolling: 修复safari中溢出无滑动的问题
+ */
+.scroll {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+}
+.slider-item {
+  z-index: 1;
+  position: absolute;
+  transition:-webkit-transform 200ms ease-out;
+  transform:translate(-100%, 0px) scale(1) translateZ(0px);
+  -webkit-transform:translate(-100%, 0px) scale(1) translateZ(0px);
+}
+.slider-item.active {
+  z-index: 0;
+  transition: -webkit-transform 200ms ease-out;
+  transform: translate(0px, 0px) scale(1) translateZ(0px);
+  -webkit-transform: translate(0px, 0px) scale(1) translateZ(0px);
+}

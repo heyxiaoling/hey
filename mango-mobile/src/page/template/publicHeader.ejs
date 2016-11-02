@@ -1,0 +1,9 @@
+<div class="mg-bar mg-bar-nav">
+    <a id="header-back" class="iconfont icon-back mg-fl"></a>
+	<%if (cfg.menutxt){%>
+    	<a id="header-menu" class="mg-head-menu mg-fr"><%=cfg.menutxt %></a>
+	<%} else if(cfg.menuico) {%>
+    	<a id="header-menu" class="iconfont mg-fr" style="display: block; width: 44px;"></a>
+	<%}%>
+    <h1 id="title" class="mg-title mg-txt-center"><%=cfg.title%></h1>
+</div>

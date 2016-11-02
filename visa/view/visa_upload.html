@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="robots" content="all" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+
+		<title></title>
+		<link rel="stylesheet" href="../css/swiper-3.3.1.min.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/fileupload.css" />
+
+	</head>
+	<body>
+
+		<div class="loading" id="loading">
+	        <img src="../img/Load.gif" >
+	    </div>
+		<div class="wrap">
+			<header class="header">
+				<span class="header-l"><a class="icon icon-back" href="javascript:void(0);">&#xe600;</a></span>
+				<span class="header-c">
+				 	<strong> 上传材料 </strong>
+				 </span>
+				<span class="header-r">
+				 	
+				 </span>
+			</header>
+			<section>
+				<div class="mg-tips">
+					<span><!-- <img src="../img/mg-uptip.png" /> --></span>
+				</div>
+				<div class="mg-split"></div>
+				<div class="content">
+					<div class="mg-file-info clr">
+						<ul class="list-ul  list-br-c">
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div class="mg-bottom">
+				<div class="mg-file-btn">
+						<div>
+							<p class="mg-file-a" >上传完毕,提交材料审核</p>
+							<span class="uncompete"></span>
+						</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 
+			image plate
+		-->
+		
+		<div id="imgplate" class="mg-img-chooser" style="display:none;">
+			<div class="mask"><div>
+			<div  class="mg-pic-list" >
+				<!-- 	<input  class="mg-file" type="file" id="chooser" onclick="loadMgupload()"> -->
+					<div class="mg-img-list">
+						<ul class="img-list">
+							<li class="mg-pic-add">
+								<form id="addForm">
+									
+								</form>
+							</li>
+						</ul>
+					</div>
+				<p>
+					<span class="mg-cancelBtn">取消</span>
+				 	<span  class="mg-subBtn">确定</span>
+				</p>
+			</div>
+			<div class="mg-up-loading">
+				<div class="mg-flower-load"></div>
+				<div class="mg-flower-load2">
+					<div class="line">
+						<div></div><div></div><div></div><div></div><div></div><div></div>
+					</div>
+					<div class="circlebg"></div>
+				</div>
+			</div>
+		</div>
+		<div id="J_data" style="display:none;">
+		</div>
+		
+		<script src="../js/zepto_1.1.3.js"></script>
+		<script src="../js/common.js"></script>
+		<script src="../js/mg-upload.js"></script>
+		<script src="../js/visa_upload.js"></script>
+
+	</body>
+
+</html>

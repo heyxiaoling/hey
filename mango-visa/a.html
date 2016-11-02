@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr1 = ['a','b','c','d'], 
+            arr2 = ['啊','哦','地方'],
+            arr3 = ['A','B'];
+        var reslut = [];
+        var arr = [];
+        function mix(){
+            
+            if(arguments.length < 2)return arr;
+            
+            var args = Array.prototype.slice.call(arguments,0);
+            var m1 = args[0];
+            
+            for(var i=0;i<m1.length;i++){
+                arr.push(m1[i]);
+                for(var k=1;k<args.length;k++){
+                    var m2 = args[k];
+                    for(var j=0;j<m2.length;j++){
+                        arr.push(m2[j]);
+                    }
+                    
+                }
+                
+            }
+            
+            return mix.apply(null,args.slice(1));
+        }
+        // mix(arr1,arr2,arr3)
+        // console.log(arr);
+
+        // var arr1 = ['a','b','c'], 
+        //     arr2 = ['啊','哦'],
+        //     arr3 = ['A','B'];
+        //     arr4 = [1,2,3,4,5];
+        //     result = [
+        //         ['a','啊','A'],
+        //         ['a','啊','B'],
+        //         ['a','哦','A'],
+        //         ['a','哦','B'],
+        //         ['b','啊','A'],
+        //         ['b','啊','B'],
+        //         ['b','哦','A'],
+        //         ['b','哦','B'],
+        //         ['c','啊','A'],
+        //         ['c','啊','A'],
+        //         ['c','哦','A'],
+        //         ['c','哦','B'],
+        //     ];
+        
+        var s = [];
+        function aa(){
+            var args = Array.prototype.slice.call(arguments,0);
+            // s.push([args[0][0],args[1][0],args[2][0]]);
+            // s.push([args[0][0],args[1][0],args[2][1]]);
+            // s.push([args[0][0],args[1][1],args[2][0]]);
+            // s.push([args[0][0],args[1][1],args[2][1]]);
+            if(args[0].length < 1) return;
+            for(var i=0; i< args.length; i++){
+                var res = [];
+                res.push(args[0][0]);
+                var arr = args[i+1];
+                if(!arr) return;
+                for(var j=0; j<arr.length; j++){
+                    res.push(arr[j]);
+                }
+                
+                s.push(args[0]);
+            }
+
+            return aa(args[0].slice(1));
+        }
+
+        aa(arr1,arr2);
+        console.log(s);
+    </script>
+</body>
+</html>

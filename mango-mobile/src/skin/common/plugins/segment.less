@@ -1,0 +1,51 @@
+@import "./../variables";
+
+//[[ 分段选项控件，用于航班过滤条件
+.mg-segment {
+  width: 100%;
+  display: block;
+  background: #f2f3f5;
+}
+.mg-segment:after, .mg-segment:before {
+  display: table;
+  content: ' '
+}
+.mg-segment:after {
+  clear: both
+}
+.mg-segment>div:first-child .active {
+  background: #f8f8f8;
+  color: @color-mg;
+}
+.mg-segment div:last-child, .mg-segment form:last-child {
+  height: 100%;
+  background: #f8f8f8;
+}
+.mg-segment div:last-child li {
+  position: relative;
+}
+.mg-segment div:last-child li:after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 15px;
+  height: 1px;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  background-color: @color-border;
+}
+.mg-segment div:last-child .mg-checkbox-btn {
+  float: right;
+}
+.mg-segment .mg-tab-content {
+  display: none;
+}
+.mg-segment .mg-tab-content.active {
+  display: block;
+}
+//]] 分段选项
+
+.mg-segment ul li {
+  padding: 11px 15px;
+}

@@ -1,0 +1,81 @@
+@import "./../common/variables";
+
+.census p {
+  margin: 5px 0px;
+}
+
+.passenger-list .info {
+  line-height: 38px;
+}
+.passenger-list .delete-ico {
+  width: 50px;
+  text-align: center;
+  color: #ea2940;
+  font-size: 26px;
+  padding: 10px;
+}
+.icon-insinfo {
+  color: #189cfb;
+}
+
+// [[ 费用明细弹窗
+.fee-pop {
+  padding: 0 15px;
+  background: #fff;
+}
+.fee-pop .top-bar, .fee-pop .bottom-bar {
+  margin: 0 -15px;
+  padding: 0 15px;
+}
+.fee-pop .top-bar {
+  height: 44px;
+  line-height: 44px;
+  border-bottom: 1px solid @color-border;
+  background: #f7f7f7;
+}
+.fee-pop .fee-content {
+  margin: 0 -15px;
+  padding: 0 25px;
+  font-size: @font-size-tag;
+}
+.fee-pop .fee-content .trip-title {
+  margin: 6px -10px;
+  padding: 0 5px;
+  border-left: 5px solid @color-mg;
+  line-height: @font-size-txt;
+}
+.fee-pop .fee-content .trip-group {
+  border-top:1px solid #cccccc;
+  border-bottom:1px solid #cccccc;
+  padding: 6px 0px;
+  font-size: @font-size-min;
+}
+.fee-pop .bottom-bar {
+  height: 44px;
+  line-height: 44px;
+  background: #f2f2f2;
+}
+.fee-pop .bottom-bar .mg-btn {
+  margin: 5px 0px;
+}
+.fee-pop .bottom-bar .mg-span-8 {
+  font-size: @font-size-tag;
+}
+.fee-pop .bottom-bar .mg-span-8 .price {
+  font-size: @font-size-title;
+  color: @color-mg;
+}
+// ]] 费用明细弹窗
+
+// [[ 行李托运
+.mg-popup .frame-content {
+  height: 200px;
+  -webkit-overflow-scrolling: touch;
+}
+.mg-popup iframe {
+  width: auto;
+  height:100%;
+  margin: -15px;
+  border:0;
+}
+// ]] 行李托运

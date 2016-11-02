@@ -68,6 +68,7 @@ input : -webkit-autofill {
  background-image : none ;
  color : #000 ;
 }
+
 /*mask*/
 .mask{
     display: none;
@@ -86,7 +87,7 @@ input : -webkit-autofill {
 /*dialog*/
 
 .dialog{
-
+    
 }
 
 .dialog .dialog-mask{

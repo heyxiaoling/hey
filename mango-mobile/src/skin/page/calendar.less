@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+};
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+#content {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    box-sizing: border-box;
+}
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+.md_datearea {
+    overflow: hidden;
+    background-color: white;
+}
+.md_panel a {
+    text-decoration: none;
+}
+.md_head {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.md_body {
+    position: relative;
+    height: auto;
+    clear: both;
+}
+.md_weekarea {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: white;
+}
+.md_weekarea li,
+.md_datearea li {
+    display: inline-block;
+    float: left;
+    width: 14.2857%;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    height: 50px;
+}
+.md_weekarea li {
+    color: #999999;
+    line-height: 50px;
+
+}
+.md_datearea li {
+    margin: 5px 0;
+
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.disabled {
+    color: #C6C6C6;
+}
+
+.day_bg {
+    background-color: #ffead5;
+}
+.able {
+    font-family: "微软雅黑";
+    font-weight: 900;
+    color: #000000;
+}
+.able_bg{
+    background-color: #ff6e00;
+    color: #FFF !important;
+    border-radius: 50%;
+}
+
+.md_datearea li span:first-child {
+    display: block;
+    width: 100%;
+    height: 20px;
+}
+ 

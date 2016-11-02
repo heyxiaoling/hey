@@ -1,0 +1,76 @@
+@import "../common/variables";
+
+.mg-passenger-list{
+	position: relative;
+	font-size: @font-size-txt;
+	font-family: "microsoft yahei";
+	color: @color-txt;
+}
+.mg-passenger-list li:first-child{
+   border-top:1px solid @color-border;
+}
+.mg-passenger-list li{
+   padding: 8px 15px;
+   border-bottom: 1px solid @color-border;
+}
+.mg-passenger-list p{
+	position: relative;
+}
+.passenger-edit{
+	position: relative;
+	padding:4px 0 4px 25px;
+}
+.passenger-edit i{
+    position: absolute;
+    left: 0px;
+    font-size: @font-size-h1;
+    line-height: 44px;
+    color: @color-mg;
+}
+.passenger-edit em{
+    display: block;
+    margin-left: 5px;
+    font-style: normal;
+    color: #666666;
+    font-size: 16px;
+    line-height:1.2;
+}
+ .passenger-edit span{
+	display: block; 
+	margin-left: 5px;
+	color: @color-title; 
+	font-size: @font-size-txt;
+}
+
+ .panssenger-choice{
+	position: relative;
+    height: 44px;
+    text-align: right;
+    line-height: 44px;
+    font-size: 0;
+}
+.panssenger-choice span:first-child{
+	top: 10px; 
+}
+.mg-add-passenger{
+	position: absolute; 
+	width:100%;
+	bottom: 0px;
+	z-index: @z-index-bar;
+}
+.mg-add-passenger li{
+    font-size: @font-size-txt;
+    font-family: "microsoft yahei";
+    color: @color-txt;
+	border-top: 1px solid @color-border;
+}
+.mg-add-passenger i{
+    margin-right: 6px;
+	width: 3px;
+    height: 3x;
+    border: transparent;
+    border-radius: 60%;
+    background: @color-mg;
+    color: @color-button-text;
+}
+ 

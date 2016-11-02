@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>个人中心_登录</title>
+    <meta name="description" content="芒果网是香港中旅集团旗下专业旅行网站，为用户提供酒店预订、酒店查询、机票预订查询、旅游度假预订、景点门票预订、租车、签证、邮轮旅游预订全方位一站式的旅行服务." />
+    <meta name="keywords" content="旅游度假,酒店,机票,酒店预订,机票预订,芒果网" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="../../images/57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../images/72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../images/114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../images/144.png" />
+
+    <link href="http://mt.mangocity.com/styles/css/base.css" rel="stylesheet" />
+    <link href="http://mt.mangocity.com/styles/css/layout.css" rel="stylesheet" />
+    <link href="http://mt.mangocity.com/styles/css/user.css" rel="stylesheet" />
+    <link href="http://mt.mangocity.com/styles/css/hack.css" rel="stylesheet" media="screen and (max-width: 639px)" />
+
+</head>
+<body>
+    <div data-role="page" title="个人中心" class="" id="loginPage">
+        <header>
+            <a href="javascript:history.back();" class="l-nav ui-icon-back" id="login-rurl"></a>
+            <span>登录</span>
+        </header>
+        <section class="l-content">
+            <form action="/" method="post" name="userForm">
+                <dl class="l-list l-input-list">
+                    <dd data-id="">
+                        <span class="label">手机号码：</span>
+                        <div class="wrapper">
+                            <div class="inner">
+                                <input type="tel" name="userMobile" maxlength="11" value="18565800995" placeholder="用于登录和接收验证码" />
+                            </div>
+                        </div>
+                        <span class="close none"></span>
+                    </dd>
+                    <dd data-id="">
+                        <span class="label">登录密码：</span>
+                        <div class="wrapper">
+                            <div class="inner">
+                                <input type="password" name="userPwd" maxlength="12" value="654321" placeholder="6-12位数字和字母" />
+                            </div>
+                        </div>
+                        <span class="close none"></span>
+                    </dd>
+                </dl>
+
+                <div class="user-link clearfix">
+                    <a href="initPassword.html" class="fl" id="forgetPwd">忘记密码？</a>
+                    <a href="register.html" class="fr" id="register">注册新用户</a>
+
+                </div>
+
+                <div class="l-btn-content">
+                    <a href="javascript:void(0)" class="l-btn" id="loginSubmit">登录</a>
+                </div>
+
+                <div class="unmember none">
+                    <div class="user-tips"></div>
+                    <div class="user-dot-line"></div>
+                    <div class="l-btn-content">
+                        <a href="javascript:void(0)" class="l-btn l-btn-blue" id="unMemberSubmit">非会员快速预订</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+    <div>
+    <div id="loginout">
+           <a href="#" class="fr" id="loginout">退出</a>  
+    </div>
+   <!--  <script src="../../scripts/vendor/zepto.min.js"></script>
+   <script src="../../scripts/baseConfig.js"></script>
+   <script src="../../scripts/common/util.min.js"></script>
+   <script src="../../scripts/services/dist/userService.min.js"></script>
+   <script src="../../scripts/controllers/dist/userController.min.js"></script> -->
+    <script src="/js/jquery-3.1.0.min.js"></script>
+     <script src="/js/common.js"></script>
+    <script>
+        (function(){
+            
+
+            var mkey= sessionStorage.getItem('mkey');
+            if(mkey){
+                 $("#loginPage").hide();
+            }else{
+                $("#loginout").hide();
+                var type=GetQueryString("type");
+                if(type==0){
+                    $(".unmember").removeClass('none');
+                }
+             
+            }
+
+            $("#loginSubmit").click(function(){
+                 console.log("user:type  "+ sessionStorage.getItem("user:type"));   
+                 sessionStorage.removeItem('user:type');   
+
+                 sessionStorage.setItem('mkey','f70a800bf60f59dbb8bbd7ee06548338');
+                 var backurl=GetQueryString("returnUrl");
+                 backurl=backurl?backurl:"../index.html";
+                  location.href=backurl;
+            });
+
+            $("#loginout").click(function(){
+                 sessionStorage.removeItem('mkey');
+                location.href="../index.html";
+            });
+
+            $("#unMemberSubmit").click(function(){
+                sessionStorage.setItem('user:type', 'unmember');
+                console.log("user:type  "+ sessionStorage.getItem("user:type"));   
+                sessionStorage.setItem('mkey','f70a800bf60f59dbb8bbd7ee06548338');
+                 var backurl=GetQueryString("returnUrl");
+                 backurl=backurl?backurl:"../index.html";
+                  location.href=backurl;
+            });
+            
+        })();
+    </script>
+   
+</body>
+</html>

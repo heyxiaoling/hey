@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"选择乘机人" || htmlWebpackPlugin.options.title,
+    "menutxt":"确认"
+    //"menuico":""
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+    <% include ./src/page/template/publicHeader %>
+    <div class="mg-add-passenger">
+		<ul class="mg-table-view mg-mt-10" id="mg-passenger-add">
+		    <li class="mg-table-view-cell  mg-txt-center"><i class="iconfont icon-add1"></i>添加乘机人</li>
+		</ul>
+   </div>
+    <div class="mg-content">
+        <ul class="mg-table-view mg-mt-10 mg-passenger-list" id="passenger-list">
+        </ul>
+    </div>
+  
+</body>
+<!--[[ 列表模板-->
+<script id="passenger-list-template" type="text/html">
+    {{each passenger as item i}}
+        <li class="mg-table-view-cell">
+        	<p class="mg-passenger mg-clear">
+                <div class="passenger-edit mg-span-10">
+                    <i class="iconfont icon-bianji" data="{{item.passId}}"></i>
+                   	<span>
+                    	<label class="J-psgName">{{item.psgName}}</label>|<label class="J-psgType" data="{{item.psgType}}">
+                    		{{if item.psgType=='MAN'}}成人{{/if}}{{if item.psgType=='CHD'}}儿童{{/if}}{{if item.psgType=='BABY'}}婴儿{{/if}}
+                    	</label>
+	                </span>
+	               	<em>
+	                   <label  class="J-certType" data="{{item.certType}}">{{if item.certType=='IDC'}}身份证{{/if}}{{if item.certType=='PSP'}}护照{{/if}}
+	                    {{if item.certType=='HKM'}}港澳通行证{{/if}}
+	                    {{if item.certType=='OTHER'}}其他{{/if}}</label>|<label  class="J-certId">{{item.certId}}</label>
+	                </em>
+                </div>
+                <div class="panssenger-choice mg-span-2">
+                 	 <input class="mg-check-btn iconfont icon-check" name="psgCheck" type="checkbox" value="{{item.passId}}">
+	            </div>
+            </p>
+        </li>  
+    {{/each}}
+</script>
+<!--列表模板 ]]-->
+</html>

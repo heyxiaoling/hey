@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"机场自取" || htmlWebpackPlugin.options.title
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+    <% include ./src/page/template/publicHeader %>
+    <div class="mg-content">
+        <div class="mg-airport-wrap">
+            <div class="mg-input-row">
+                <div class="mg-navigate-right">
+                    <label>机场</label>
+                    <input type="text" name="area" class="airport-chance" placeholder="请选择地区" readonly='readonly' >
+                </div>
+            </div>
+            <div class="mg-input-row">
+                <div class="mg-navigate-right">
+                    <label>柜台地址</label>
+                    <input type="text" name="area" class="counter-chance" placeholder="请选择地区" readonly='readonly' >
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- <ul class="mg-table-view mg-mt-10">
+            <li class="mg-table-view-cell">
+                <a class="airport-chance">机场</a>
+            </li>
+            <li class="mg-table-view-cell">
+                <a class="counter-chance">柜台地址</a>
+            </li>
+        </ul> -->
+        <div class="mg-condition mg-hide" id="mg-airport">
+            <div class="mg-condition-mask mg-mask"></div>
+            <div class="mg-condition-content mg-bottom-up">
+                <ul class="mg-condition-slide-wrap">
+                    <!-- <li class="mg-condition-slide mg-condition-slide-active mg-txt-center">深圳宝安国际机场</li>
+                    <li class="mg-condition-slide mg-txt-center">深圳宝安国际机场</li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="mg-condition mg-hide" id="mg-counter">
+            <div class="mg-condition-mask mg-mask"></div>
+            <div class="mg-condition-content mg-bottom-up">
+                <ul class="mg-condition-slide-wrap">
+                    <!-- <li class="mg-condition-slide mg-condition-slide-active mg-txt-center">新航站楼出港大厅B岛南航补票柜台(08:00-20:00)</li>
+                    <li class="mg-condition-slide mg-txt-center">新航站楼出港大厅B岛南航补票柜台(08:00-20:00)</li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

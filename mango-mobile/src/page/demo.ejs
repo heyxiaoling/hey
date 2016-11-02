@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"mgui-使用范例" || htmlWebpackPlugin.options.title
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+
+<body>
+
+<% include ./src/page/template/publicHeader %>
+
+<!--[[ 底部nav -->
+<nav class="mg-bar mg-bar-tab">
+    <a class="mg-tab-item mui-active" href="#">
+        A
+    </a>
+    <a class="mg-tab-item" href="#">
+        B
+    </a>
+    <a class="mg-tab-item" href="#">
+        C
+    </a>
+    <a class="mg-tab-item" href="#">
+        D
+    </a>
+</nav>
+<!--]] 底部nav-->
+
+<div class="mg-content">
+    <div class="mg-tab" id="mg-tab">
+        <div class="mg-tab-title">
+            <ul>
+                <li class="mg-tab-title-slide mg-span-4">title1</li>
+                <li class="mg-tab-title-slide mg-span-4">title2</li>
+                <li class="mg-tab-title-slide mg-span-4">title3</li>
+            </ul>
+        </div>
+        <div class="mg-tab-wrapper">
+            <div class="mg-tab-slide" style="display:block">aaa</div>
+            <div class="mg-tab-slide" style="display:none">bbb</div>
+            <div class="mg-tab-slide" style="display:none">ccc</div>
+        </div>
+    </div>
+
+    <!--[[ 航司logo-->
+    <div class="mg-mt-10">
+        <div style="zoom:0.5;" class="mg-airline"><i class="CZ"></i></div>
+    </div>
+    <!--]] 航司logo-->
+    <!--[[ 列表项 .mg-txt-center 文字居中-->
+    <ul class="mg-table-view">
+        <li class="mg-table-view-cell mg-txt-center">
+            <div class="mg-strong">很遗憾产品预订失败！</div>
+            <span>请稍后再试，或致电 40066-40066</span>
+        </li>
+    </ul>
+    <!--]] 列表项-->
+    <ul class="mg-table-view mg-mt-10" id="main-content"></ul>
+    <!--[[ 列表项-->
+    <ul class="mg-table-view mg-mt-10">
+        <li class="mg-table-view-cell">
+            <a href="#notifications" class="mg-navigate-right">列表项1</a>
+        </li>
+        <li class="mg-table-view-cell">
+            <a href="#privacy" class="mg-navigate-right">默认列表项超出宽度，自动填充省略号，测试测试测试</a>
+        </li>
+        <li class="mg-table-view-cell">
+            <a href="#general">无需右侧箭头，去掉a标签中的.mg-navigate-right</a>
+        </li>
+    </ul>
+    <!--]] 列表项-->
+    <!--[[ 网格布局-->
+    <div class="mg-group-title">网格布局</div>
+    <div class="mg-clear" style="background-color: #FFF;display: block">
+        <div class="mg-span-1" style="background-color: #bbb">1</div>
+        <div class="mg-span-2" style="background-color: #999">2</div>
+        <div class="mg-span-3" style="background-color: #bbb">mg-span-3</div>
+        <div class="mg-span-6" style="background-color: #999">mg-span-6</div>
+    </div>
+    <!--]] 网格布局-->
+    <!--]] 列表网格-->
+    <ul class="mg-table-view mg-mt-10">
+        <li class="mg-table-view-cell mg-txt-center">
+            <div class="mg-row">
+                <a class="mg-span-3" id="prev-day">前一天</a>
+                <a class="mg-span-6">日历</a>
+                <a class="mg-span-3" id="next-day">后一天</a>
+            </div>
+        </li>
+    </ul>
+    <!--]] 列表网格-->
+    <!--[[ 表单-->
+    <div class="mg-group-title">表单</div>
+    <form id="test-form" class="mg-input-group">
+        <div class="mg-input-row">
+            <label>收件人</label>
+            <input type="text" name="name" placeholder="请输入真实姓名">
+        </div>
+        <div class="mg-input-row">
+            <label>下拉弹出</label>
+            <select name="" id="" class="mg-input-col">
+                <option value="aa">aa</option>
+                <option value="bb">bb</option>
+                <option value="cc">cc</option>
+                <option value="dd">dd</option>
+                <option value="ee">ee</option>
+            </select>
+        </div>
+        <div class="mg-input-row">
+            <label>手机号码</label>
+            <input type="tel" name="phone" placeholder="请输入联系手机">
+        </div>
+        <div class="mg-input-row">
+            <div class="mg-navigate-right">
+                <label>省/市</label>
+                <input type="text" name="area" class="" placeholder="请选择地区">
+            </div>
+        </div>
+        <div class="mg-input-row">
+            <label>报销凭证</label>
+           	<div style="font-size: 16px;height: 20px;vertical-align: middle;margin-top: -10px;">
+           	 <!-- [[ 滑动开关按钮 -->
+            <span class="mg-switch-btn">
+                <input class="checked-switch" name="ticket" type="checkbox">
+                <span class="btn-switch-text"></span>
+                <span class="btn-switch"></span>
+            </span>
+            <!-- ]] -->
+           </div>
+        </div>
+        <div class="mg-input-row">
+            <label>是否快递</label>
+            <div style="font-size: 16px;height: 20px;vertical-align: middle;margin-top: 10px;">
+            <!--[[  勾选按钮-->
+				<!--	<span class="mg-checkbox-btn">
+					<input class="btn-checkbox" name="express" type="checkbox">
+					<span class="btn-checkbox-outline"></span>
+					</span>-->
+					 <input class="mg-check-btn iconfont icon-check" name="express" type="checkbox">
+					
+            <!-- ]]-->
+           </div>
+        </div>
+        <div class="mg-button-row">
+            <button type="button" class="mg-btn btn-sm btn-radius-green" onclick="return false;">取消</button> &nbsp;&nbsp;
+            <button type="button" id="sub-button" class="mg-btn btn-sm btn-radius-mgbg">确认</button>
+        </div>
+    </form>
+    <!--]] 表单-->
+    <!--[[ 按钮-->
+
+    <ul class="mg-table-view mg-mt-10" id="main-content">
+        <li>
+            <div class="mg-group-title">当前定位</div>
+        </li>
+        <li>
+            <button type="button" class="mg-btn btn-xm btn-radius-nobg" onclick="return false;">
+                <span class="btn-local"></span>
+                深圳</button>
+        </li>
+        <li>
+            <div class="mg-group-title">历史选择</div>
+        </li>
+        <li>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">北京</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">广州</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">上海</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">内蒙古</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">乌鲁木齐</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">呼尔哈特</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">天津</button>
+            <button class="mg-btn btn-sm btn-radius-uncheck" type="button" onclick="return false;">珠海</button>
+        </li>
+    </ul>
+    <div class="mg-input-row">
+    	<button class="mg-btn " type="button">默认</button>
+        <button class="mg-btn btn-xl btn-radius-mgbg" type="button">开始搜索</button>
+        <button class="mg-btn btn-radius-mgbg" type="button">选择乘机人</button>
+				<span style="display: inline-block;float: right">
+               	<button class="mg-btn btn-with-active" type="button">预订</button>
+            </span>
+    </div>
+    <ul class="mg-table-view mg-mt-10" id="main-content">
+        <li style="float: right">
+            <button class="mg-btn btn-md btn-angle-mgbg" type="button">去支付</button>
+        </li>
+    </ul>
+    <!--]] -->
+</div>
+
+<!--[[ popup 弹窗demo-->
+<div id="popup-demo" class="mg-popup"> <!-- 弹出内容需放在.mg-popup容器内 -->
+    <div style="width: 100%;height: 200px; margin: 0; padding: 0; background: #FFF">
+        <p class="h1">测试信息弹窗</p>
+        <p>hello</p>
+    </div>
+</div>
+<!--]] popup 弹窗demo-->
+
+<!--[[ 列表模板-->
+<script id="list-template" type="text/html">
+    {{each list as item i}}
+    <li class="mg-table-view-cell">
+        <div class="mui-table">
+            <label for="">{{item.title}}</label>
+            <div>{{item.content}}</div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<!--列表模板 ]]-->
+</body>
+
+</html>

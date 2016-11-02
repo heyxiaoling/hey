@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"快递" || htmlWebpackPlugin.options.title,
+    "menutxt":"确认"
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+    <% include ./src/page/template/publicHeader %>
+    <!--[[ 底部nav -->
+    <div class="mg-add-express">
+        <ul class="mg-table-view mg-mt-10">
+            <li class="mg-table-view-cell  mg-txt-center"><i class="iconfont icon-add1"></i>添加快递地址</li>
+        </ul>
+    </div>
+    <div class="mg-content">
+        <div class="mg-express-title">
+            <ul class="mg-clear">
+                <li class="mg-span-6 mg-express-title-chance checked">
+                    <span class="mg-checkbox-btn">
+                        <input class="btn-checkbox" name="express" type="checkbox">
+                        <span class="btn-checkbox-outline"></span>
+                    </span>
+                    快递（10元）
+                </li>
+                <li  class="mg-span-6 mg-express-title-chance">
+                    <span class="mg-checkbox-btn">
+                        <input class="btn-checkbox" name="express" type="checkbox">
+                        <span class="btn-checkbox-outline"></span>
+                    </span>
+                    加速快递（20元）
+                </li>
+            </ul>
+        </div>
+        <div class="mg-express-list">
+            <ul class="mg-table-view mg-mt-10">
+                <li class="mg-table-view-cell">
+                    <p  class="mg-express-list-slide mg-clear">
+                        <div class="mg-express-edit mg-span-6">
+                            <i class="iconfont icon-bianji"></i>
+                            <span>王一平</span>
+                            <em>广东省/深圳市/南沙区</em>
+                        </div>
+                        <div class="mg-express-chance mg-span-6">
+                           <span class="mg-checkbox-btn">
+                                <input class="btn-checkbox" name="express" type="checkbox">
+                                <span class="btn-checkbox-outline"></span>
+                            </span>
+                        </div>
+                    </p>
+                </li>
+                <li class="mg-table-view-cell">
+                    <p  class="mg-express-list-slide mg-clear">
+                        <div class="mg-express-edit mg-span-6">
+                            <i class="iconfont icon-bianji"></i>
+                            <span>王一平</span>
+                            <em>广东省/深圳市/南沙区</em>
+                        </div>
+                        <div class="mg-express-chance mg-span-6">
+                            <span class="mg-checkbox-btn">
+                                <input class="btn-checkbox" name="express" type="checkbox">
+                                <span class="btn-checkbox-outline"></span>
+                            </span>
+                        </div>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

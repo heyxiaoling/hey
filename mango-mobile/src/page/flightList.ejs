@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"机票列表" || htmlWebpackPlugin.options.title
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+    <% include ./src/page/template/publicHeader %>
+    <!--[[ 底部nav -->
+    <nav class="mg-bar mg-bar-tab">
+        <a id="sort-by-filter" class="mg-tab-item">
+            <i class="iconfont icon-filter"></i>
+            筛选
+        </a>
+        <a id="sort-by-time" class="mg-tab-item">
+            <i class="iconfont icon-time"></i>
+            时间排序
+        </a>
+        <a id="sort-by-price" class="mg-tab-item">
+            <i class="iconfont icon-price"></i>
+            价格
+        </a>
+    </nav>
+
+    <!--]] 底部nav-->
+    <div class="mg-content">
+        <!--日历控件-->
+        <ul id="calendar-bar" class="mg-table-view"></ul>
+        <!--航班列表项-->
+        <ul class="mg-table-view mg-mt-10" id="flight-list"></ul>
+    </div>
+    <!--[[ 航班过滤控件-->
+    <div id="flight-filter-pop" class="mg-popup">
+        <div class="flight-filter">
+            <div class="top-bar">
+                <div class="filter-title">
+                    筛选
+                </div>
+                <a id="filter-clear" class="mg-fr">清除选项</a>
+            </div>
+            <div id="flight-filter" class="mg-segment">
+            </div>
+            <div class="bottom-bar">
+                <a id="filter-confirm">确定</a>
+            </div>
+        </div>
+    </div>
+    <!--]] 航班过滤控件-->
+</body>
+<!--[[ 列表模板-->
+<script id="flight-list-template" type="text/html">
+    {{each flightList as item i}}
+    <li class="mg-table-view-cell">
+        <a href="flightDetail.html?departCity={{item.departCity}}&arrivalCity={{item.arrivalCity}}&depDate={{item.depDate}}&routeType={{item.routeType}}&flightNo={{item.flightNo}}&policyType={{item.policyType}}" class="mui-table flight-list">
+            <div class="mg-span-9">
+                <div class="list-col">
+                    <p class="flight-time mg-color-title">{{item.depTime}}</p>
+                    <p class="h5 mg-color-txt">{{item.depAirPortCn}}</p>
+                </div>
+                <div class="list-col mg-txt-center">
+                    <p class="iconfont flight-line"><span></span>
+                        {{if item.stop}}
+                        <i></i>
+                        {{/if}}
+                    </p>
+                    {{if item.stop}}
+                    <p class="mg-color-sec h5">经停</p>
+                    {{/if}}
+                </div>
+                <div class="list-col">
+                    <p class="flight-time mg-color-title">{{item.arrTime}}</p>
+                    <p class="h5 mg-color-txt">{{item.arrAirPortCn}}</p>
+                </div>
+            </div>
+            <div class="mg-span-3 mg-txt-right">
+                <p class="mg-color-mg"><span class="h5">￥</span><span class="price">{{item.adultPrice}}</span>起</p>
+                <p class="h5 mg-color-sec">{{item.cabinName}} ({{item.adultDiscount}})折</p>
+            </div>
+            <div class="mg-span-12 h4 mg-color-sec">
+                <span class="mg-airline"><i class="{{item.airLineCode}}"></i></span>{{item.airlineCn}}{{item.flightNo}} <span>共享</span> | {{item.planeModel}} ({{item.planeType}})
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--列表模板 ]]-->
+<!--[[ 日历控件-->
+<script id="calendar-bar-template" type="text/html">
+    {{if data.routeType == "RT"}}
+    <li class="mg-table-view-cell trip-tips">
+        <div class="mg-span-1"><span class="tips">返</span></div>
+        <div class="mg-span-8">{{data.depDate}}  07:00-09:00  SJ3265</div>
+        <div class="mg-span-3">￥500</div>
+    </li>
+    {{/if}}
+    <li class="mg-table-view-cell mg-txt-center date-selector">
+        <div class="date-selector h5 mg-row">
+            <a class="mg-span-3" id="prev-day">
+                <i class="iconfont icon-back1"></i>
+                <p>前一天</p>
+                <p class="mg-strong">￥420</p>
+            </a>
+            <a class="mg-span-6 calendar" id="set-date">
+                <i class="iconfont icon-calendar"></i>
+                {{data.depDate.substring(5,10)}} 周六
+                <span class="mg-color-mg mg-strong">￥194</span>
+                <i class="iconfont icon-moreunfold"></i>
+            </a>
+            <a class="mg-span-3" id="next-day">
+                <p>后一天</p>
+                <p class="mg-strong">￥420</p>
+                <i class="iconfont icon-more"></i>
+            </a>
+        </div>
+    </li>
+</script>
+<!--日历控件 ]]-->
+<!--[[ 航班过滤控件-->
+<script id="flight-filter-template" type="text/html">
+    <div class="mg-tab mg-span-4">
+        <ul class="mg-tab">
+            <li target="filter-time" class="active">起飞时间</li>
+            <li target="filter-airport">机场</li>
+            <li target="filter-plane">机型</li>
+            <li target="filter-room">舱位</li>
+            <li target="filter-company">航空公司</li>
+        </ul>
+    </div>
+    <form id="filter-form" class="mg-span-8">
+        <ul id="filter-time" class="mg-tab-content active">
+            <li>
+                <label>
+                    不限
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            <li>
+                <label>
+                    凌晨 00:00-06:00
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            <li>
+                <label>
+                    上午 06:00-12:00
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            <li>
+                <label>
+                    下午 12:00-18:00
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            <li>
+                <label>
+                    晚间 18:00-24:00
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+        </ul>
+        <ul id="filter-airport" class="mg-tab-content">
+            <ul>
+                <dt>起飞机场</dt>
+                {{each depAirport as item i}}
+                <li>
+                    <label>
+                        {{item}}
+                        <input name="express" type="checkbox">
+                    </label>
+                </li>
+                {{/each}}
+            </ul>
+
+            <ul>
+                <dt>降落机场</dt>
+                {{each arrAirport as item i}}
+                <li>
+                    <label>
+                        {{item}}
+                        <input name="express" type="checkbox">
+                    </label>
+                </li>
+                {{/each}}
+            </ul>
+        </ul>
+        <ul id="filter-plane" class="mg-tab-content">
+            {{each plane as item i}}
+            <li>
+                <label>
+                    {{item}}
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            {{/each}}
+        </ul>
+        <ul id="filter-room" class="mg-tab-content">
+            {{each room as item i}}
+            <li>
+                <label>
+                    {{item}}
+                    <input name="express" type="checkbox">
+                </label>
+            </li>
+            {{/each}}
+        </ul>
+        <ul id="filter-company" class="mg-tab-content">
+            {{each company as item i}}
+            <li>
+                <label>
+                    <span style="zoom:0.5;" class="mg-airline"><i class="{{airline[i]}}"></i></span>
+                {{item}}
+                    <span class="mg-checkbox-btn">
+                        <input class="btn-checkbox" name="express" type="checkbox">
+                        <span class="btn-checkbox-outline"></span>
+                        <label class="btn-checkbox-text"></label>
+                    </span>
+                </label>
+            </li>
+            {{/each}}
+        </ul>
+    </form>
+</script>
+<!--航班过滤控件 ]]-->
+</html>

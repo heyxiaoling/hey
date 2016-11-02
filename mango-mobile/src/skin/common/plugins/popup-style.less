@@ -1,0 +1,101 @@
+@import "./../variables";
+
+/*[[ 橙色样式*/
+.mg-orange-dialog >div {
+    display: inline-block;
+}
+.mg-orange-dialog {
+    position: relative;
+    width: 80%;
+    margin: 0;
+    background: transparent;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 2px;
+    border-radius: 12px;
+    z-index: @z-index-mask-up;
+}
+.mg-orange-dialog > div.dialog-head {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    top: 0;
+    left: 0;
+    background: @color-mg;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    z-index: @z-index-pop;
+}
+.dialog-head p {
+    font-size: @font-size-title;
+    color: @color-button-text;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2.5;
+}
+.dialog-content {
+    width: 100%;
+    margin: 0;
+    padding: 5px 15px 25px 15px;
+    background: @color-content;
+    -webkit-border-bottom-left-radius: 12px;
+    -webkit-border-bottom-right-radius: 12px;
+    -moz-border-radius-bottomleft: 12px;
+    -moz-border-radius-bottomright:12px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: @z-index-pop;
+}
+.dialog-content label {
+    font-size: 16px;
+    color: @color-mg;
+    text-align: left;
+}
+.dialog-content p {
+    padding: 5px 0;
+    font-size: 14px;
+    color: @color-sec;
+    text-align: left;
+}
+.dialog-content p:last-child {
+    padding: 10px 0;
+}
+.dialog-foot {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    z-index: @z-index-pop;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    background: transparent;
+    z-index: @z-index-pop;
+}
+.dialog-btn {
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    color: @color-button-text;
+    vertical-align: middle;
+    line-height: 2;
+    background: @color-mg;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent;
+    -webkit-border-radius: 60%;
+    -moz-border-radius: 60%;
+    border-radius: 60%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    z-index: @z-index-pop-up;
+}
+.dialog-btn-md{
+  line-height: 2.8;
+}
+
+/*]]*/

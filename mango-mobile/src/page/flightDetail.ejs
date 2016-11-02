@@ -1,0 +1,229 @@
+ <!DOCTYPE html>
+<html>
+ <%
+ var cfg = {
+	 "title":"航班详情" || htmlWebpackPlugin.options.title
+ };
+ %>
+ <head>
+	 <meta charset="utf-8">
+	 <% include ./src/page/template/publicMeta %>
+	 <title><%=cfg.title %></title>
+ </head>
+<body>
+	<% include ./src/page/template/publicHeader %>
+
+    <div class="mg-content">
+    	<section class="mg-flight-msg">
+    		 <ul class="mg-table-view mg-mt-15" id="mg-flight-detail">
+		      	
+		    </ul>
+    	</section>
+	    <section class="mg-flight-seats">
+	    	<ul class="mg-table-view mg-mt-15" id="seat-list">
+		    </ul>
+	    </section>
+	  </div>
+	  
+	  <!--[[ 弹出层-->
+	  	<div class="mg-popup" id="mg-debook">
+		    	<div class="mg-orange-dialog">
+			     	<div class="dialog-head">
+			     		<p>退改签规则</p>
+			     	</div>
+			     	<div class="dialog-content">
+			     		<label>更改条件</label>
+			     		<p>
+			     			起飞2小时前收取20%的退票费;起飞2小时内收取30%的退票费.(儿童按经济舱规定办理)
+			     		</p>
+			     		<label>退票条件</label>
+			     		<p>
+			     			起飞2小时前收取20%的退票费;起飞2小时内收取30%的退票费.(儿童按经济舱规定办理)
+			     		</p>
+			     		<label>签转条件</label>
+			     		<p>
+			     			不得转签
+			     		</p>
+			     		<label>备注</label>
+			     		<p>
+			     			以航司规定为准.
+			     		</p>
+			     		<p>
+			     			经济舱5.5折
+			     		</p>
+			     	</div>
+		     		<div class="dialog-foot">
+		     			<span class="dialog-btn">预订</span>
+		     		</div>
+		    	</div>
+	      </div>
+	      <!--]]-->
+</body>
+<!--[[航班详情 -->
+<script id="flight-detail-template" type="text/html">
+	<li id="flight-title">
+		<div class="mg-clear mg-flight-title"  >
+			{{if flight.routeType=='RT'}}
+			<span class="mg-flight-route {{if flight.routeDirect==1}}mg-hidden{{/if}}">去</span>
+			<span class="mg-flight-route {{if flight.routeDirect==2}}mg-hidden{{/if}}">返</span>
+			{{/if}}
+			<span class="mg-flight-time">{{flight.depDate.substring(5,10)}} {{getWeekDayBy(flight.depDate)}}</span>
+			<span class="J-mg-broad">宝安T3-首都T3</span>
+			<span class="mg-flight-hours">
+				<label class="iconfont icon-naozhong3 mg-inline" herf="javascrip:;"></label>{{getFlightTime(flight.depDate+' '+flight.depTime,flight.depDate+' '+flight.arrTime)}}
+			</span>
+		</div>	
+	</li>
+	{{if flight.stop==false}}
+	<li>
+		<div class="mg-clear mg-flight-content">
+			<div class="mg-fl">
+				<span class="flight-line-1 mg-fl">
+				    <p class="mg-block flight-txt">{{flight.depTime}}</p>
+				    <p>&nbsp;</p>
+					<p class="mg-block flight-txt">{{flight.arrTime}}</p>
+				</span>
+				<span class="mg-flight-map"></span>
+			</div>
+			<div class="mg-fl">
+				<p class="mg-block flight-txt ">{{flight.depAirPortCn}}{{flight.depTerminal}}</p>
+				<p>&nbsp;</p>
+				<p class="mg-block flight-txt">{{flight.arrAirPortCn}}{{flight.arrTerminal}}</p>
+			</div>
+			<div class="mg-fr txt-rg">
+				<p class="mg-block">
+					<label class="mg-company-icon mg-airline">
+						 <i class="{{flight.airLineCode}}"></i>
+					</label>{{flight.airlineCn}}
+				</p>
+				<p>{{flight.flightNo}}</p>
+				<p>{{flight.planeModel}}({{flight.planeType}})</p>
+			</div>
+		</div>
+	</li>
+	{{/if}}
+	{{if flight.stop}}
+	<li>
+		<div class="mg-clear mg-flight-content">
+			<div class="mg-fl flight-line-1">
+				<p class="mg-block flight-txt">{{flight.depTime}}</p>
+				<p class="mg-block transfer flight-sec-txt">{{transfer.cityNameCn}}</p>
+				<p class="mg-block flight-txt">{{flight.arrTime}}</p>
+			</div>
+			<div class="mg-fl">
+				<p class="mg-flight-stop">
+					<span class="mg-flight-map"></span>
+					<span class="flight-transfer-icon">停</span>
+				</p>
+			</div>
+			<div class="mg-fl">
+				<p class="mg-block flight-txt ">{{flight.depAirPortCn}}{{flight.depTerminal}}</p>
+				<p class="mg-inline flight-sec-txt"> {{transfer.arrTime}} - {{transfer.takeoffTime}}</p>
+				<p class="mg-block flight-txt">{{flight.arrAirPortCn}}{{flight.arrTerminal}}</p>
+			</div>
+			<div class="mg-fr mg-flight">
+				<p class="mg-block">
+					<label class="mg-company-icon mg-airline">
+						 <i class="{{flight.airLineCode}}"></i>
+					</label>{{flight.airlineCn}}
+				</p>
+				<p>{{flight.flightNo}}</p>
+				<p>{{flight.planeModel}}({{flight.planeType}})</p>
+			</div>
+		</div>
+	</li>
+	{{/if}}
+</script>
+<!--航班详情]]-->
+<!--[[ 列表模板-->
+<script id="seat-list-template" type="text/html">
+ 	{{each seatAndPolicyList as item i}}
+	 	{{if (cabinLevel &&  item.cabinLevel==cabinLevel) || (!cabinLevel)}}
+	 	<li>
+			<div class="mg-clear mg-seat">
+				<div class="mg-span-5 ">
+					<span class="mg-seat-type">{{item.cabinName}}</span>
+					<label>{{ if item.adultDiscount}}{{item.adultDiscount}}折{{/if}}</label>
+					<span class="mg-seat-rule">
+						<a class="J-mg-refund" herf="#">退订规定</a>
+					</span>
+				</div>
+				<div class="mg-span-7 mg-fr">
+					<div class="mg-inline mg-fr">
+						<button class="mg-btn btn-with-active" type="button">预订</button>
+					</div>
+					<div class="mg-seat-price mg-fr">
+						<span class="mg-pr-num">
+						    <label>￥</label>{{item.productPrice}}
+						</span>
+						<label>{{if item.promotCash}}{{promotCash}}{{/if}}</label>
+					</div>
+				</div>
+			</div>
+		</li>
+	 	{{/if}}
+	{{/each}} 	
+	  
+</script>
+<!--列表模板 ]]-->
+
+<!--[[经停航班效果 -->
+<!--script id="flight-transfer-template" type="text/html">
+	<li class="mg-hidden">
+		<div class="mg-clear mg-transfer-flight">
+			<div class="mg-fl">
+				<span class="flight-line-1 mg-fl">
+			      	<p class="mg-block flight-txt">08:05</p>
+			      	<p>&nbsp;</p>
+				    <p class="mg-block flight-transfer-txt">09:00</p>
+			    </span>
+				<span class="mg-flight-map active"></span>
+			</div>
+			<div class="mg-fl">
+				<p class="mg-block flight-txt ">宝安机场T3</p>
+				<p>&nbsp;</p>
+				<p class="mg-block flight-transfer-txt">首都机场T3</p>
+			</div>
+			<div class="mg-fr mg-flight">
+				<p class="mg-block">
+					<label class="mg-company-icon">&</label> 深圳航空
+				</p>
+				<p>ZH9959</p>
+				<p>739(中)</p>
+			</div>
+		</div>
+		<div class="mg-clear transfer">
+			<div class="flight-line-1">
+				<span class="mg-inline flight-sec-txt">郑州机场</span>
+			</div>
+			<div class="flight-line-3">
+				<span class="flight-transfer-icon">转</span>
+			</div>
+			<span class="mg-inline flight-sec-txt">停留3h15m</span>
+		</div>
+		<div class="mg-clear mg-transfer-flight">
+			<div class="mg-fl">
+				<span class="flight-line-1 mg-fl">
+			      	<p class="mg-block flight-transfer-txt">08:05</p>
+			      	<p>&nbsp;</p>
+				    <p class="mg-block flight-txt ">09:00</p>
+			    </span>
+				<span class="mg-flight-map link"></span>
+			</div>
+			<div class="mg-fl">
+				<p class="mg-block flight-transfer-txt">宝安机场T3</p>
+				<p>&nbsp;</p>
+				<p class="mg-block flight-txt ">首都机场T3</p>
+			</div>
+			<div class="mg-fr mg-flight">
+				<p class="mg-block">
+					<label class="mg-company-icon">&</label> 深圳航空
+				</p>
+				<p>ZH9959</p>
+				<p>739(中)</p>
+			</div>
+		</div>
+	</li>
+</script-->
+<!-- 经停航班效果]] -->
+</html>

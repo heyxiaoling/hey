@@ -1,0 +1,308 @@
+@import "../common/variables";
+.mg-bar-nav ~ .mg-content {
+    padding-top: 40px;
+}
+//[[ 航班信息
+.mg-flight-msg {
+    padding: 0;
+    background: @color-content;
+}
+.mg-flight-msg li:first-child {
+    border-bottom: 1px solid @color-border;
+}
+.mg-flight-msg li:last-child {
+    padding-bottom: 15px;
+}
+.mg-flight-title {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.875rem;
+    font-family: "Microsoft YaHei";
+    color: @color-title;
+    line-height: 1.5;
+}
+.mg-flight-title span {
+    margin: 0;
+    padding: 0;
+}
+.mg-flight-title > span:last-child {
+    float: right;
+}
+.mg-flight-title > .mg-flight-time {
+    width: 1.25rem;
+    padding: 0 1rem 0 0;
+}
+.mg-flight-route {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: @color-mg;
+    font-size: @font-size-title;
+    color: @color-button-text;
+    line-height: 1.3;
+    text-align: center;
+    vertical-align: middle;
+    -moz-transform: matrix( 0.742,0,0,0.742,0,0);
+    -webkit-transform: matrix( 0.742,0,0,0.742,0,0);
+    -ms-transform: matrix( 0.742,0,0,0.742,0,0);
+    transform: matrix( 0.742,0,0,0.742,0,0);
+}
+.mg-flight-hours {
+    display: inline-block;
+    position: relative;
+}
+.mg-flight-hours label {
+    z-index: 21;
+}
+.mg-flight-content {
+    padding: 10px 15px 15px;
+}
+.mg-company-icon {
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    line-height: 1;
+    zoom:0.5;
+}
+.mg-flight {
+    .txt-rg;
+}
+.mg-flight p,
+label {
+    font-family: "microsoft yahei";
+    color: @color-title;
+}
+.mg-flight p:nth-last-child(2) {
+    font-size: @font-size-txt;
+    line-height: 1.3;
+}
+.mg-flight p:last-child {
+    color: @color-mg;
+    font-size: @font-size-title;
+    line-height: 1.6;
+}
+.flight-txt {
+    font-size: @font-size-title;
+    font-family: "microsoft yahei";
+    color: @color-title;
+}
+.mg-transfer-flight {
+    width: 100%;
+    height: auto;
+    padding: 10px 15px 0;
+    overflow: hidden;
+}
+.mg-transfer-flight:last-child {
+    padding: 0 15px 10px;
+}
+.transfer {
+    width: 100%;
+    height: auto;
+    padding: 0 15px;
+    overflow: hidden;
+}
+.mg-transfer-flight > div:first-child {
+    text-align: right;
+    vertical-align: bottom;
+}
+.mg-flight-transfer {}
+.flight-line-1 {
+    display: inline-block;
+    width: 3rem;
+}
+.flight-line-2,
+.flight-line-3 {
+    display: inline-block;
+    width: 1.25rem;
+}
+.flight-line-2 {
+    margin-right: 0.25rem;
+}
+.flight-transfer-txt {
+    font-size: @font-size-txt;
+    font-family: "microsoft yahei";
+    color: @color-txt;
+}
+.flight-sec-txt {
+    padding: 5px 0;
+    font-size: @font-size-min;
+    font-family: "microsoft yahei";
+    color: @color-sec;
+}
+.flight-line {
+    width: 2rem;
+}
+.mg-flight-stop{
+    position: relative;
+}
+.mg-flight-stop span:first-child{
+    position: relative;
+}
+.mg-flight-stop span:last-child{
+    position: absolute;
+}
+//]]
+//[[ 舱位信息
+.mg-flight-seats {}
+.mg-flight-seats > ul {
+    background: @color-bg;
+}
+.mg-flight-seats li {
+    background: @color-content;
+}
+.mg-seat {
+    margin: 10px 15px;
+    padding: 10px 0;
+    line-height: 1.3;
+}
+.mg-seat-type {
+    display: inline-block;
+    font-size: @font-size-txt;
+    font-family: "Microsoft YaHei";
+    color: @color-title;
+    line-height: 1.3;
+}
+.mg-seat-type ~ label {
+    display: inline-block;
+    margin: 0 5px;
+    color: @color-sec;
+    font-size: @font-size-min;
+    font-family: "Microsoft YaHei";
+}
+.mg-seat-rule {
+    display: block;
+    margin: 3px 0;
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+}
+.mg-seat-rule a {
+    color: @color-link;
+    text-decoration: underline;
+}
+.mg-seat-price {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+.mg-seat-price > span,
+label {
+    display: block;
+    text-align: right;
+}
+.mg-seat-price > label {
+    font-size: 12px;
+    line-height: 1.1;
+}
+.mg-pr-num,
+.mg-pr-num > label {
+    display: inline-block;
+    color: @color-mg;
+}
+.mg-pr-num {
+    font-size: @font-size-h1;
+    line-height: 1.2;
+}
+.mg-pr-num > label {
+    font-size: @font-size-min;
+}
+//]]
+//[[ 示意图
+//无中转
+.mg-flight-map {
+    display: inline-block;
+    position: relative;
+    margin: 18px 10px 0;
+    width: 1px;
+    height: 36px;
+    border: 1px solid @color-border;
+    vertical-align: middle;
+}
+.mg-flight-map:before {
+    position: absolute;
+    margin: -3px 0 0 -3px;
+    width: 2px;
+    height: 2px;
+    border: 2px solid @color-border;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: @color-border;
+    content: '';
+}
+.mg-flight-map.link:before {
+    position: absolute;
+    margin: -3px 0 0 -3px;
+    width: 2px;
+    height: 2px;
+    border: 2px solid @color-border;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: @color-content;
+    content: '';
+}
+.mg-flight-map:after {
+    position: absolute;
+    margin: 34px 0 0 -3px;
+    width: 2px;
+    height: 2px;
+    border: 2px solid @color-border;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    background: @color-border;
+    content: '';
+}
+.mg-flight-map.active:after {
+    position: absolute;
+    margin: 34px 0 0 -3px;
+    width: 2px;
+    height: 2px;
+    border: 2px solid @color-border;
+    background: @color-content;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    content: '';
+}
+//转
+.flight-transfer-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    color: #15d6ba;
+    line-height: 1.5;
+    text-align: center;
+    vertical-align: middle;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #15d6ba;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+//]]
+//[[ 其他附加效果
+.mg-hidden {
+    position: absolute;
+    visibility: hidden;
+}
+.mg-visible {
+    position: absolute;
+    visibility: visible;
+}
+.mg-inline {
+    display: inline-block;
+}
+.mg-block {
+    display: block;
+}
+.txt-rg {
+    text-align: right;
+}
+//]]

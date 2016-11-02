@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<%
+var cfg = {
+    "title":"订单填写" || htmlWebpackPlugin.options.title
+};
+%>
+<head>
+    <meta charset="utf-8">
+    <% include ./src/page/template/publicMeta %>
+    <title><%=cfg.title %></title>
+</head>
+<body>
+<% include ./src/page/template/publicHeader %>
+<!--[[ 底部nav -->
+<nav class="mg-bar mg-bar-tab">
+    <div class="mg-tab-item">
+        <div class="h4 mg-color-sec">总额<span class="mg-color-mg">￥</span><span class="mg-color-mg h1">2130</span></div>
+    </div>
+    <a id="fee-detail" class="mg-tab-item h4">
+        费用明细
+    </a>
+    <a class="mg-btn btn-md btn-angle-mgbg mg-tab-item" type="button">去支付</a>
+</nav>
+<!--]] 底部nav-->
+
+<div class="mg-content">
+    <!--[[ 基本信息-->
+    <ul class="mg-table-view">
+        <li class="mg-table-view-cell">
+            <a href="#notifications" class="mg-navigate-right">12-10 周四 16:35 宝安T3-首都T3</a>
+        </li>
+        <li class="mg-table-view-cell">
+            <div class="mg-span-8">
+                <p class="h4"><span class="h2 mg-color-title mg-strong">经济舱</span>(4.6折)</p>
+                <p class="h4 mg-color-sec">机建￥50 燃油￥0</p>
+                <p><a id="provis-info">退订规定</a></p>
+            </div>
+            <div class="census mg-txt-right mg-span-4 h4">
+                <p>成人￥2000</p>
+                <p>儿童￥2000</p>
+                <p>婴儿￥2000</p>
+            </div>
+        </li>
+    </ul>
+    <!--]] 基本信息-->
+
+    <ul class="passenger-list mg-table-view mg-mt-10">
+        <li class="mg-table-view-cell">
+            <div class="info mg-clear mg-color-sec">
+                乘机人 <span class="h4">成人2人  儿童1人  婴儿1人</span>
+                <a id="chose-passenger" class="mg-btn btn-radius-mgbg mg-fr" type="button">选择乘机人</a>
+            </div>
+        </li>
+        <li class="mg-table-view-cell mg-clear">
+            <span class="delete-ico iconfont icon-forbid mg-fl"></span>
+            <div class="mg-fl">
+                <p>王二小</p>
+                <p class="h4 mg-color-sec">身份证  420802554866854485</p>
+            </div>
+        </li>
+        <li class="mg-table-view-cell mg-clear">
+            <span class="delete-ico iconfont icon-forbid mg-fl"></span>
+            <div class="mg-fl">
+                <p>王二小</p>
+                <p class="h4 mg-color-sec">身份证  420802554866854485</p>
+            </div>
+        </li>
+    </ul>
+    <form id="test-form" class="mg-input-group">
+        <div class="mg-input-row">
+            <label>联系人手机</label>
+            <input type="tel" name="phone" placeholder="请输入联系手机">
+        </div>
+    </form>
+    <!--]] 乘机人-->
+
+    <!--[[ 保险-->
+    <form id="insurance-form" class="mg-input-group mg-mt-10">
+        <div class="mg-input-row">
+            <label for="check-insurance">意外险 <i class="iconfont icon-insinfo"></i></label>
+            <div class="mg-input-col">
+                全程 ￥40/人X1
+                <span class="mg-switch-btn mg-fr">
+                    <input class="checked-switch" id="check-insurance" type="checkbox">
+                    <span class="btn-switch-text"></span>
+                    <span class="btn-switch"></span>
+                </span>
+            </div>
+        </div>
+    </form>
+    <!--]] 保险-->
+    <!--[[ 报销凭证-->
+    <form id="expenses-form" class="mg-input-group mg-mt-10">
+        <div class="mg-input-row">
+            <label for="check-proof">报销凭证</label>
+            <div class="mg-input-col">
+                <span class="mg-switch-btn mg-fr">
+                    <input id="check-proof" class="checked-switch" name="ticket" type="checkbox">
+                    <span class="btn-switch-text"></span>
+                    <span class="btn-switch"></span>
+                </span>
+            </div>
+        </div>
+        <div class="mg-input-row">
+            <label for="check-proof">配送方式</label>
+            <div class="mg-input-col mg-txt-right">
+                <a id="express-type">选择配送方式</a>
+            </div>
+        </div>
+    </form>
+    <!--]] 报销凭证-->
+    <div class="mg-txt-center mg-mt-15">
+        <input id="luggage-agreement" name="agreement" type="checkbox">
+        <label for="luggage-agreement">
+            已阅读并同意<a id="luggage-info">行李托运须知</a>
+        </label>
+    </div>
+
+    <!--[[ 退改规定弹窗-->
+    <div class="mg-popup">
+        更改条件
+    </div>
+    <!--]] 退改规定弹窗-->
+
+</div>
+
+<!--[[ 费用明细弹窗-->
+<div id="fee-pop" class="mg-popup">
+    <div class="fee-pop">
+        <div class="top-bar">费用明细</div>
+        <div class="fee-content">
+            <div class="trip-title">去程</div>
+            <div class="trip-group mg-clear">
+                <div class="mg-span-5">成人票</div>
+                <div class="mg-span-5 mg-color-mg">￥1000</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+                <div class="mg-span-5">机建+燃油</div>
+                <div class="mg-span-5 mg-color-mg">￥50</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+                <div class="mg-span-5">航空意外险</div>
+                <div class="mg-span-5 mg-color-mg">￥20</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+            </div>
+            <div class="trip-title">返程</div>
+            <div class="trip-group mg-clear">
+                <div class="mg-span-5">成人票</div>
+                <div class="mg-span-5 mg-color-mg">￥1000</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+                <div class="mg-span-5">机建+燃油</div>
+                <div class="mg-span-5 mg-color-mg">￥50</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+                <div class="mg-span-5">航空意外险</div>
+                <div class="mg-span-5 mg-color-mg">￥20</div>
+                <div class="mg-span-2"><span class="mg-color-mg">X1</span>人</div>
+            </div>
+            <div>邮寄费</div>
+        </div>
+        <div class="bottom-bar">
+            <label class="mg-span-8">
+                总额:<span class="mg-color-mg">￥<span class="price">760</span>起</span>
+            </label>
+            <a class="mg-btn btn-radius-mgbg mg-span-4 mg-fr" type="button">去支付</a>
+        </div>
+    </div>
+</div>
+<!--]] 费用明细弹窗-->
+
+<!--[[ 退订规定弹窗-->
+<div id="luggage-pop" class="mg-popup">
+    <div class="mg-orange-dialog">
+        <div class="dialog-head">
+            <p>行李托运须知</p>
+        </div>
+        <div class="dialog-content frame-content"></div>
+        <div class="dialog-foot">
+            <span class="dialog-btn mg-popup-cancel">关闭</span>
+        </div>
+    </div>
+</div>
+<!--]] 退订规定弹窗-->
+
+<!--[[ 行李托运须知-->
+<div id="provis-pop" class="mg-popup">
+    <div class="mg-orange-dialog">
+        <div class="dialog-head">
+            <p>退订规定</p>
+        </div>
+        <div class="dialog-content">
+            <label>更改条件</label>
+            <p>
+                起飞2小时前收取20%的退票费;起飞2小时内收取30%的退票费.(儿童按经济舱规定办理)
+            </p>
+            <label>退票条件</label>
+            <p>
+                起飞2小时前收取20%的退票费;起飞2小时内收取30%的退票费.(儿童按经济舱规定办理)
+            </p>
+            <label>签转条件</label>
+            <p>
+                不得转签
+            </p>
+            <label>备注</label>
+            <p>
+                以航司规定为准.
+            </p>
+            <p>
+                经济舱5.5折
+            </p>
+        </div>
+        <div class="dialog-foot">
+            <span class="dialog-btn mg-popup-cancel">关闭</span>
+        </div>
+    </div>
+</div>
+<!--]] 行李托运须知-->
+
+</body>
+</html>

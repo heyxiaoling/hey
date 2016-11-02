@@ -1,0 +1,85 @@
+@-o-viewport{width:device-width;height:device-height;}
+form{}
+.wrap{margin:0 auto;padding:0;background-color:#fff;height:100%;}
+.mg-split{width:100%;height:16px;margin:0;padding:0;}
+.mg-tips{width:100%;height:auto;padding:0 15px;}
+.mg-tips span{display:inline-block;width:100%;height:175px;vertical-align:middle;background-image:url(../img/mg-uptip.png);-moz-background-size:contain;-ms-background-size:contain;-webkit-background-size:contain;-o-background-size:contain;background-size:contain;background-repeat:no-repeat;background-position:center;}
+.content{margin:0 auto;height:70%;padding-bottom:100px;}
+.mg-file-info{width:100%;height:auto;padding:0 15px;}
+.list-br-c .list-ul-li:nth-last-of-type(1) .list-ul-li-a{border-bottom:1px solid #eaeaea;}
+.mg-bottom{position:fixed;bottom:0;width:100%;background-color:#FFFFFF;height:70px;}
+.mg-file-btn{position:relative;display:inline-block;width:100%;height:44px;padding:0 15px;line-height:44px;}
+.mg-file-btn div{position:relative;width:100%;height:44px;background-color:#d4d4d4;vertical-align:middle;-moz-border-radius:6px;-webkit-border-radius:6px;-o-border-radius:6px;-ms-border-radius:6px;border-radius:6px;}
+.mg-file-btn span{position:absolute;display:inline-block;margin:0;padding:0;	/* width: 70%; */height:44px;background-color:#19cc88;z-index:2;}
+.uncompete{-moz-border-radius-bottomleft:6px;-moz-border-radius-topleft:6px;-webkit-border-bottom-left-radius:6px;-webkit-border-bottom-left-radius:6px;-ms-border-bottom-left-radius:6px;-ms-border-bottom-left-radius:6px;-o-border-radius-bottomleft:6px;-o-border-radius-topleft:6px;border-top-left-radius:6px;border-bottom-left-radius:6px;border-bottom-left-radius:6px;}
+.compete{-moz-border-radius:6px;-webkit-border-radius:6px;-o-border-radius:6px;-ms-border-radius:6px;border-radius:6px;}
+.mg-file-btn .mg-file-a{position:absolute;display:table-cell;width:100%;height:auto;color:#FFFFFF;font-size:22px;text-align:center;z-index:99;}
+.mg-feild-right{color:#19cc88;}
+.mg-feild-incon{position:absolute;line-height:inherit;right:12px;}
+
+/*上传控件样式*/
+.mg-img-chooser{width:100%;height:auto;}
+.mg-pic-list{width:100%;height:auto;position:absolute;padding:10px 5px;bottom:0;background-color:#FFFFFF;z-index:100;}
+.mg-pic-list p{display:block;width:100%;height:68px;margin-top:12px;padding-top:12px;background-color:#f6f6f6;text-align:center;vertical-align:middle;}
+.mg-pic-list a{display:inline-block;padding:10px 5px;height:auto;text-decoration:none;}
+.mg-cancelBtn{display:inline-block;width:120px;height:auto;line-height:35px;font-size:30px;display:inline-block;text-decoration:none;font-size:18px;color:#19cc88;letter-spacing:5px;border:1px solid #19cc88;text-align:center;vertical-align:middle;-webkit-border-radius:25px;-moz-border-radius:25px;-o-border-radius:25px;-ms-border-radius:25px;border-radius:25px;}
+.mg-subBtn{display:inline-block;width:120px;height:auto;line-height:35px;border:1px solid #19cc88;font-size:30px;display:inline-block;text-decoration:none;font-size:18px;color:#FFFFFF;letter-spacing:5px;background-color:#19cc88;text-decoration:none;text-align:center;vertical-align:middle;-webkit-border-radius:25px;-moz-border-radius:25px;-o-border-radius:25px;-ms-border-radius:25px;border-radius:25px;}
+.mg-file{opacity:0;filter:alpha(opacity=60);position:absolute;right:12px;font-size:16px;width:16px;height:25px;z-index:100;}
+canvas{width:100%;border:1px solid #000000;}
+.mg-img-list{width:auto;padding:10px;z-index:101;background-color:#FFFFFF;text-align:left;}
+.img-list{}
+.img-list li{position:relative;display:inline-block;width:93px;height:93px;margin:5px 5px 12px 5px;line-height:93px;font-size:0;text-align:center;	/* border: 1px solid rgb(100, 149, 198); */background-size:cover;-webkit-border-radius:13px;-moz-border-radius:13px;-o-border-radius:13px;-ms-border-radius:13px;border-radius:13px;}
+.bg-load{background-image:url(../img/default-img.jpg);-moz-background-size:contain;-ms-background-size:contain;-webkit-background-size:contain;-o-background-size:contain;background-size:contain;background-repeat:no-repeat;background-position:center;}
+.img-list li img{position:absolute;display:block;width:93px;height:93px;background-size:cover;-webkit-border-radius:13px;-moz-border-radius:13px;-o-border-radius:13px;-ms-border-radius:13px;border-radius:13px;}
+.img-list li i{position:absolute;display:block;width:93px;height:93px;background-size:cover;-webkit-border-radius:13px;-moz-border-radius:13px;-o-border-radius:13px;-ms-border-radius:13px;border-radius:13px;}
+.mg-pic-del{display:inline-block;position:absolute;top:0;right:0;width:22px;height:22px;opacity:1.6;filter:alpha(opacity=60);-webkit-border-radius:5px;-moz-border-radius:5px;-o-border-radius:5px;-ms-border-radius:5px;border-radius:5px;background-image:url(../img/up-del.png);background-size:22px 22px;background-color:#868686;}
+.mg-pic-add{position:relative;display:inline-block;width:158px;height:158px;margin:5px 5px 20px 5px;	/* border: 1px solid rgb(100, 149, 198); */background:#fff no-repeat center;background-image:url("../img/up-add.png");}
+.mg-pic-file{display:inline-block;position:absolute;top:25%;left:25%;text-align:center;vertical-align:middle;width:45px;height:45px;opacity:0;filter:alpha(opacity=0);z-index:100;}
+.mask{height:auto;}
+
+/* 小菊花转动效果 */
+.mg-up-loading{margin:0;padding:0;position:absolute;width:100%;bottom:0;display:none;opacity:0.6;filter:alpha(opacity=0.6);background:#1d1818;font-size:0;z-index:115;}
+.mg-flower-load,.mg-flower-load2{width:100%;height:50%;z-index:112;display:inline-block;vertical-align:middle;}
+.mg-flower-load{background:#1d1818 center center no-repeat;}
+.mg-flower-load2{background:#1d1818;}
+
+/** 加载动画的静态样式 **/
+.mg-flower-load2{position:relative;}
+.mg-flower-load2 .line div{position:absolute;left:50%;top:0;width:3px;height:40px;display:inline-block;vertical-align:middle;z-index:113;}
+.mg-flower-load2 .line div:before,.mg-flower-load2 .line div:after{content:'';display:block;height:50%;background:#fcfcfc;border-radius:5px;}
+.mg-flower-load2 .line div:nth-child(2){transform:rotate(30deg);-webkit-transform:rotate(30deg);-moz-transform:rotate(30deg);-o-transform:rotate(30deg);-ms-transform:rotate(30deg);}
+.mg-flower-load2 .line div:nth-child(3){transform:rotate(60deg);-webkit-transform:rotate(60deg);-moz-transform:rotate(60deg);-o-transform:rotate(60deg);-ms-transform:rotate(60deg);}
+.mg-flower-load2 .line div:nth-child(4){transform:rotate(90deg);-webkit-transform:rotate(90deg);-moz-transform:rotate(90deg);-o-transform:rotate(90deg);-ms-transform:rotate(90deg);}
+.mg-flower-load2 .line div:nth-child(5){transform:rotate(120deg);-webkit-transform:rotate(120deg);-moz-transform:rotate(120deg);-o-transform:rotate(120deg);-ms-transform:rotate(120deg);}
+.mg-flower-load2 .line div:nth-child(6){transform:rotate(150deg);-webkit-transform:rotate(150deg);-moz-transform:rotate(150deg);-o-transform:rotate(150deg);-ms-transform:rotate(150deg);}
+.mg-flower-load2 .circlebg{position:absolute;left:50%;top:20px;width:16px;height:16px;margin:-9px -7px;background:#1d1818;border-radius:18px;z-index:113;}
+
+/** 加载动画 **/
+@keyframes load{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-webkit-keyframes load{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+@-moz-keyframes load{
+	0%{opacity:0;}
+	100%{opacity:1;}
+}
+.mg-flower-load2 .line div:nth-child(1):before{animation:load 1.2s linear 0s infinite;-webkit-animation:load 1.2s linear 0s infinite;-moz-animation:load 1.2s linear 0s infinite;-o-animation:load 1.2s linear 0s infinite;-ms-animation:load 1.2s linear 0s infinite;}
+.mg-flower-load2 .line div:nth-child(2):before{animation:load 1.2s linear 0.1s infinite;-webkit-animation:load 1.2s linear 0.1s infinite;-moz-animation:load 1.2s linear 0.1s infinite;-o-animation:load 1.2s linear 0.1s infinite;-ms-animation:load 1.2s linear 0.1s infinite;}
+.mg-flower-load2 .line div:nth-child(3):before{animation:load 1.2s linear 0.2s infinite;-webkit-animation:load 1.2s linear 0.2s infinite;-moz-animation:load 1.2s linear 0.2s infinite;-o-animation:load 1.2s linear 0.2s infinite;-ms-animation:load 1.2s linear 0.2s infinite;}
+.mg-flower-load2 .line div:nth-child(4):before{animation:load 1.2s linear 0.3s infinite;-webkit-animation:load 1.2s linear 0.3s infinite;-moz-animation:load 1.2s linear 0.3s infinite;-o-animation:load 1.2s linear 0.3s infinite;-ms-animation:load 1.2s linear 0.3s infinite;}
+.mg-flower-load2 .line div:nth-child(5):before{animation:load 1.2s linear 0.4s infinite;-webkit-animation:load 1.2s linear 0.4s infinite;-moz-animation:load 1.2s linear 0.4s infinite;-o-animation:load 1.2s linear 0.4s infinite;-ms-animation:load 1.2s linear 0.4s infinite;}
+.mg-flower-load2 .line div:nth-child(6):before{animation:load 1.2s linear 0.5s infinite;-webkit-animation:load 1.2s linear 0.5s infinite;-moz-animation:load 1.2s linear 0.5s infinite;-o-animation:load 1.2s linear 0.5s infinite;-ms-animation:load 1.2s linear 0.5s infinite;}
+.mg-flower-load2 .line div:nth-child(1):after{animation:load 1.2s linear 0.6s infinite;-webkit-animation:load 1.2s linear 0.6s infinite;-moz-animation:load 1.2s linear 0.6s infinite;-o-animation:load 1.2s linear 0.6s infinite;-ms-animation:load 1.2s linear 0.6s infinite;}
+.mg-flower-load2 .line div:nth-child(2):after{animation:load 1.2s linear 0.7s infinite;-webkit-animation:load 1.2s linear 0.7s infinite;-moz-animation:load 1.2s linear 0.7s infinite;-o-animation:load 1.2s linear 0.7s infinite;-ms-animation:load 1.2s linear 0.7s infinite;}
+.mg-flower-load2 .line div:nth-child(3):after{animation:load 1.2s linear 0.8s infinite;-webkit-animation:load 1.2s linear 0.8s infinite;-moz-animation:load 1.2s linear 0.8s infinite;-o-animation:load 1.2s linear 0.8s infinite;-ms-animation:load 1.2s linear 0.8s infinite;}
+.mg-flower-load2 .line div:nth-child(4):after{animation:load 1.2s linear 0.9s infinite;-webkit-animation:load 1.2s linear 0.9s infinite;-moz-animation:load 1.2s linear 0.9s infinite;-o-animation:load 1.2s linear 0.9s infinite;-ms-animation:load 1.2s linear 0.9s infinite;}
+.mg-flower-load2 .line div:nth-child(5):after{animation:load 1.2s linear 1s infinite;-webkit-animation:load 1.2s linear 1s infinite;-moz-animation:load 1.2s linear 1s infinite;-o-animation:load 1.2s linear 1s infinite;-ms-animation:load 1.2s linear 1s infinite;}
+.mg-flower-load2 .line div:nth-child(6):after{animation:load 1.2s linear 1.1s infinite;-webkit-animation:load 1.2s linear 1.1s infinite;-moz-animation:load 1.2s linear 1.1s infinite;-o-animation:load 1.2s linear 1.1s infinite;-ms-animation:load 1.2s linear 1.1s infinite;}
+
+/* 放大图片 */
+.mg-max-view{display:block;position:fixed;width:100%;height:100%;padding:15px 15px;top:0;left:0;right:0;bottom:0;z-index:125;background:rgba(0,0,0,0.4);}
+.mg-view-close{display:inline-block;position:absolute;top:15px;right:15px;width:22px;height:22px;opacity:1.6;filter:alpha(opacity=60);background-image:url("../img/up-del.png");background-size:22px 22px;background-color:#868686;}

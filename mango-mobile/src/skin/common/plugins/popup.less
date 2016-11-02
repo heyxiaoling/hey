@@ -1,0 +1,41 @@
+@import "./../variables";
+
+//[[ 弹出层公共控件
+.mg-popup {
+  position: fixed;
+  z-index: @z-index-pop;
+  overflow: hidden;
+  width: auto;
+  height: auto;
+  display: none;
+  width: 100%;
+  pointer-events: none;     // 点击事件可穿透
+}
+//]]
+
+//[[ 底部弹出插件
+.mg-popup>div {
+  margin-left: auto;
+  margin-right: auto;
+  pointer-events: all;     // 点击事件不可穿透
+}
+//]] 底部弹出插件
+
+//[[ 弹出公用动画
+//@keyframes mg-pop-up {
+//  from {top:0px;}
+//  to {top:200px;}
+//}
+//@-moz-keyframes mg-pop-up { /* Firefox */
+//  from {top:0px;}
+//  to {top:200px;}
+//}
+//@-webkit-keyframes mg-pop-up { /* Safari 和 Chrome */
+//  from {top:0px;}
+//  to {top:200px;}
+//}
+//@-o-keyframes mg-pop-up { /* Opera */
+//  from {top:0px;}
+//  to {top:200px;}
+//}
+//]] 弹出公用动画
